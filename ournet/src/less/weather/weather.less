@@ -1,0 +1,401 @@
+﻿.text-center {
+	text-align: center;
+}
+
+#widget-w-link {
+	float: right;
+	display: inline-block;
+	padding-left: 22px;
+	margin-top: 14px;
+	position: relative;
+	.icon {
+		top: 1px;
+		left: 0px;
+		background-position: -20px 0px;
+	}
+}
+
+#page-content-right {
+	position: relative;
+	.affix {
+		top: 0px;
+	}
+	.affix-bottom {
+		//bottom: 200px;
+		position: absolute;
+	}
+}
+
+#page-content-menu {
+	padding-right: 0px;
+	.menu-header {
+		background-color: rgba(202, 52, 18, 0.8);
+		color: #fff;
+		font-weight: bold;
+		margin-bottom: 4px;
+		padding: 4px 10px;
+		font-size: 110%;
+		position: relative;
+		a {
+			color: #fff;
+		}
+	}
+	.menu {
+		margin-bottom: 20px;
+		font-size: 110%;
+		font-weight: bold;
+		a {
+			display: block;
+			padding: 4px 10px;
+			color: #435a66;
+			text-decoration: none;
+			&:hover, &.selected {
+				color: #ca3412;
+				background: #fff;
+			}
+			&.selected {
+				position: relative;
+				.box-shadow(-3px 0 6px #ddd);
+				.border-left-radius(2px);
+			}
+		}
+	}
+	.tab {
+		.tab-title {
+			background: none;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			color: #ca3412;
+			text-transform: uppercase;
+			padding: 5px 10px;
+			font-weight: bold;
+			a {
+				color: #ca3412;
+			}
+		}
+		.tab-content {
+			padding: 5px 10px;
+		}
+		ul.alist {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				margin: 2px 0;
+				padding: 2px 0;
+			}
+		}
+	}
+}
+
+#page-content-menu-inner {
+	background: rgba(255, 255, 255, 0.4);
+}
+
+#page-data {
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	.box-shadow(0 0 6px #ddd);
+	&.view-form {
+		padding: 10px;
+		border: 1px solid #ccc;
+		.border-radius(3px);
+	}
+	table {
+		width: 100%;
+		border: 0;
+		border-spacing: 0;
+	}
+}
+
+h1,
+h2 {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+.sinfo {
+	color: #999;
+	font-size: 11px;
+}
+
+#place-weather-summary h2 {
+	padding-bottom: 4px;
+}
+
+.weather-table {
+	border: 0;
+	border-spacing: 0;
+	width: 100%;
+	.no {
+		text-align: right;
+	}
+	td {
+		border-bottom: 1px solid #ddd;
+		padding: 3px;
+	}
+	.last-hour td {
+		border-bottom: 0;
+	}
+	.head {
+		padding: 0;
+		border-bottom: 0;
+		text-align: left;
+		div {
+			margin: 0;
+			background: #85a559;
+			color: #fff;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			padding: 1px;
+			background: -webkit-gradient(linear, left top, left bottom, from(#9db77a), to(#85a559));
+			background: -moz-linear-gradient(top, #9db77a, #85a559);
+			background: -ms-linear-gradient(top, #9db77a, #85a559);
+		}
+	}
+	thead th {
+		font-weight: normal;
+		font-size: 80%;
+		padding: 3px;
+		background: #eee;
+	}
+	.hour {
+		font-size: 140%;
+	}
+	.symbol {
+		min-width: 60px;
+		max-width: 120px;
+		text-align: center;
+		img {
+			height: 42px;
+			width: 42px;
+		}
+	}
+	.symbol-name {
+		font-size: 90%;
+	}
+	.temperature {
+		font-size: 180%;
+		color: #005c9c;
+		max-width: 120px;
+	}
+	h3 {
+		margin: 0;
+		padding: 3px 6px;
+	}
+}
+
+.wind-dir {
+	text-align: center;
+	.wind-img {
+		width: 18px;
+		height: 18px;
+		opacity: .8;
+		background-image: url('http://assets.ournetcdn.net/root/img/icons/weather/32-wind-arrow.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: inline-block;
+	}
+}
+
+.wind-img-SE {
+	.rotate(-135deg)
+}
+
+.wind-img-S {
+	.rotate(-90deg)
+}
+
+.wind-img-SW {
+	.rotate(-45deg)
+}
+
+.wind-img-E {
+	.rotate(180deg)
+}
+
+.wind-img-NW {
+	.rotate(45deg)
+}
+
+.wind-img-N {
+	.rotate(90deg)
+}
+
+.wind-img-NE {
+	.rotate(135deg)
+}
+
+.w-icon {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-wb.png') 0 0 no-repeat;
+	&.night {
+		background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-night-wb.png') 0 0 no-repeat;
+	}
+	&.wi2 {
+		background-position: -40px 0;
+	}
+	&.wi3 {
+		background-position: -80px 0;
+	}
+	&.wi4 {
+		background-position: -120px 0;
+	}
+	&.wi5 {
+		background-position: -160px 0;
+	}
+	&.wi6 {
+		background-position: -200px 0;
+	}
+	&.wi7 {
+		background-position: -240px 0;
+	}
+	&.wi8 {
+		background-position: -280px 0;
+	}
+	&.wi9 {
+		background-position: -320px 0;
+	}
+	&.wi10 {
+		background-position: -360px 0;
+	}
+	&.wi11 {
+		background-position: -400px 0;
+	}
+	&.wi12 {
+		background-position: -440px 0;
+	}
+	&.wi13 {
+		background-position: -480px 0;
+	}
+	&.wi14 {
+		background-position: -520px 0;
+	}
+	&.wi15 {
+		background-position: -560px 0;
+	}
+}
+
+#page-title {
+	padding-bottom: 20px;
+	&.media {
+		padding-top: 5px;
+	}
+	&.media .pull-left {
+		margin-right: 15px;
+		img {
+			height: 100px;
+			width: 100px;
+			background-color: #eee;
+			border-radius: 3px;
+		}
+	}
+	.our-sharedata {
+		margin-top: 5px;
+	}
+	.media-body {
+		overflow: hidden;
+	}
+}
+
+#place-weather-title {
+	margin-bottom: 2px;
+	.our-sharedata {
+		float: right;
+		margin-left: 10px;
+	}
+}
+
+#cn-summary {
+	.weather-summary {
+		td {
+			padding: 0 6px;
+			border-bottom: 1px solid #ddd;
+		}
+		.name {
+			font-weight: bold;
+		}
+		.temperature {
+			font-size: 140%;
+		}
+		.symbol img {
+			height: 32px;
+			width: 32px;
+		}
+	}
+	.menu {
+		.first {
+			border-left: 1px solid #7c9a53;
+		}
+		th {
+			cursor: pointer;
+			border: 1px solid #7c9a53;
+			padding: 8px 16px;
+			border-left: 0;
+			border-bottom: 0;
+			color: #fff;
+			text-shadow: 1px 1px 0 #738f4d;
+			background: #9db77a;
+			background: -webkit-gradient(linear, left top, left bottom, from(#9db77a), to(#85a559));
+			background: -moz-linear-gradient(top, #9db77a, #85a559);
+			background: -ms-linear-gradient(top, #9db77a, #85a559);
+		}
+		.selected {
+			background: #fff;
+			border-bottom-color: #fff;
+			text-shadow: none;
+			color: #444;
+		}
+	}
+}
+
+#user-location {
+	font-size: 90%;
+	color: #999;
+	position: relative;
+	top: -4px;
+	a {
+		color: #999;
+	}
+}
+
+#weather-source-footer {
+	position: relative;
+	background: #eee;
+	line-height: 16px;
+	padding: 10px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+#yr-logo {
+	display: block;
+	width: 120px;
+	height: 36px;
+	float: right;
+	right: 10px;
+	background: url('http://www.yr.no/grafikk/yr-logo.png') center center no-repeat;
+	.opacity(.6);
+	position: absolute;
+	top: 0;
+}
+/*      widget      */
+
+.form-table {
+	td, th {
+		padding: 3px;
+	}
+	select {
+		padding: 4px 6px;
+		border: 1px solid #ddd;
+		.border-radius(3px);
+	}
+	button {
+		padding: 6px 12px;
+	}
+}

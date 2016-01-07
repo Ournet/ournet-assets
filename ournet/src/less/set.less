@@ -1,0 +1,139 @@
+@grid-items: 6;
+
+// Generate the extra small columns
+.make-xs-items(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage((@columns / @grid-items));
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+
+// Generate the small columns
+.make-sm-items(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-sm-min) {
+    float: left;
+    width: percentage((@columns / @grid-items));
+  }
+}
+
+// Generate the medium columns
+.make-md-items(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-md-min) {
+    float: left;
+    width: percentage((@columns / @grid-items));
+  }
+}
+
+// Generate the large columns
+.make-lg-items(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-lg-min) {
+    float: left;
+    width: percentage((@columns / @grid-items));
+  }
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-items`.
+
+.make-set-items() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .set(@index) when (@index = 1) { // initial
+    @item: ~".set-xs-@{index}, .set-sm-@{index}, .set-md-@{index}, .set-lg-@{index}";
+    .set(@index + 1, @item);
+  }
+  .set(@index, @list) when (@index =< @grid-items) { // general; "=<" isn't a typo
+    @item: ~".set-xs-@{index}, .set-sm-@{index}, .set-md-@{index}, .set-lg-@{index}";
+    .set(@index + 1, ~"@{list}, @{item}");
+  }
+  .set(@index, @list) when (@index > @grid-items) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+    }
+  }
+  .set(1); // kickstart it
+}
+
+.make-set-items-float(@class) {
+  .set(@index) when (@index = 1) { // initial
+    @item: ~".set-@{class}-@{index}";
+    .set(@index + 1, @item);
+  }
+  .set(@index, @list) when (@index < @grid-items) { // general
+    @item: ~".set-@{class}-@{index}";
+    .set(@index + 1, ~"@{list}, @{item}");
+  }
+  .set(@index, @list) when (@index = @grid-items) { // terminal
+    @{list} {
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 8px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+  .set(1); // kickstart it
+}
+
+.calc-set(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .set-@{class}-@{index} {
+    width: percentage(100/@index/100);
+  }
+}
+
+// Basic looping in LESS
+.make-set(@index, @class, @type) when (@index >= 0) {
+  .calc-set(@index, @class, @type);
+  // next iteration
+  .make-set(@index - 1, @class, @type);
+}
+
+
+.make-set-items-float(xs);
+.make-set-items-float(sm);
+.make-set-items-float(md);
+.make-set(@grid-items, xs, width);
+
+@media (min-width: @screen-sm-min) {
+  .make-set(@grid-items, sm, width);
+}
+@media (min-width: @screen-md-min) {
+  .make-set(@grid-items, md, width);
+}

@@ -1,0 +1,257 @@
+﻿#fix {}
+
+.form-layout {
+	.container {
+		max-width: 956px;
+	}
+}
+
+body.mobile {
+	.container {
+		max-width: 720px;
+	}
+	#page-data {
+		padding: 10px;
+	}
+	#page-data-inner {
+		overflow: hidden;
+	}
+	#page-header {
+		overflow: hidden;
+	}
+	#user-location {
+		top: 0px;
+	}
+}
+
+#sys-top-bar {
+	height: 30px;
+	background-color: @sys-bar-color;
+	#gradient > .vertical(@sys-bar-light-color, @sys-bar-dark-color);
+	overflow: hidden;
+}
+
+#sys-menu {
+	float: left;
+}
+
+#sys-user {
+	float: right;
+	.sys-user-icon {
+		float: right;
+		display: inline-block;
+		.square(30px);
+		padding: 3px;
+		background-color: @sys-bar-dark-color;
+		img {
+			.square(24px);
+			.border-radius(2px);
+		}
+	}
+}
+
+#sys-menu a {
+	float: left;
+}
+
+#sys-user .bar-item,
+#sys-menu a {
+	color: @sys-bar-text-color;
+	display: inline-block;
+	padding: 8px 12px;
+	cursor: pointer;
+	text-shadow: 0 -1px 0 #2f3f47;
+	line-height: 14px;
+	text-decoration: none;
+}
+
+#sys-user .bar-item:hover,
+#sys-menu a:hover,
+#sys-menu a.active {
+	background-color: darken(@sys-bar-dark-color, 3%);
+}
+
+#sys-user .bar-item {
+	float: right;
+}
+
+#sys-menu a .count {
+	font-size: 85%;
+	color: #fff;
+	background-color: @green-color;
+	.border-radius(25px);
+	padding: 0px 5px;
+	position: absolute;
+	top: 1px;
+}
+
+//logo, search, details
+#page-header {
+	height: 50px;
+	padding: 10px 0;
+}
+
+#header-logo a {
+	float: left;
+	width: 160px;
+	display: inline-block;
+	height: 50px;
+	background-position: 0 8px;
+	background-repeat: no-repeat;
+}
+
+#header-logo a {
+	background-image: url('//assets.ournetcdn.net/ournet/img/logos/ournet-logo.png');
+}
+
+.country-md #header-logo a {
+	background-image: url('//assets.ournetcdn.net/ournet/img/logos/click-logo.png');
+}
+
+.country-ru #header-logo a {
+	background-image: url('//assets.ournetcdn.net/ournet/img/logos/zborg-logo.png');
+}
+
+.country-pl #header-logo a {
+	background-image: url('//assets.ournetcdn.net/ournet/img/logos/diez-logo.png');
+}
+
+.country-al #header-logo a {
+	background-image: url('//assets.ournetcdn.net/ournet/img/logos/moti2-logo.png');
+}
+
+#header-search {
+	float: left;
+	padding-left: 10px;
+	height: 40px;
+	padding-top: 10px;
+	#q-form {
+		position: relative;
+		height: 30px;
+	}
+	#q {
+		outline: 0;
+		border: 1px solid #CCC;
+		width: 100%;
+		background: white;
+		padding: 4px 7px;
+		float: left;
+		border-bottom-color: #BBB;
+		border-right-color: #BBB;
+		.border-radius(3px);
+	}
+	#search-btn {
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		height: 24px;
+		width: 24px;
+		display: inline-block;
+		text-decoration: none;
+		background: #fff;
+		.icon {
+			background-position: 0 0px;
+			width: 18px;
+			height: 18px;
+			top: 2px;
+			left: 2px;
+		}
+	}
+}
+
+#layout-content {
+	margin-top: 18px;
+}
+
+.media-object {
+	background-color: #eee;
+}
+
+#page {
+	.btn {
+		border: none;
+		margin: 6px 6px 0px 0px;
+	}
+}
+
+#page-footer {
+	color: #999;
+	padding-bottom: 10px;
+	.page-load-divider {
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	h3,
+	h4,
+	h5 {
+		margin: 0px;
+		margin-bottom: 5px;
+	}
+}
+
+#page-footer-portals {
+	div {
+		padding-bottom: 3px;
+		display: inline-block;
+		width: 50%;
+		max-width: 150px;
+		float: left;
+	}
+	a {
+		padding-left: 20px;
+		display: inline-block;
+		position: relative;
+		&:hover {
+			.flag-icon {
+				opacity: .9;
+			}
+		}
+	}
+}
+
+.flag-icon {
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	background: url('http://assets.ournetcdn.net/ournet/img/flags-sprite-11.png') 0px 0px no-repeat;
+	left: 0px;
+	top: 1px;
+	opacity: .7;
+	&.flag-ro {
+		background-position-y: -16px;
+	}
+	&.flag-ru {
+		background-position-y: -32px;
+	}
+	&.flag-in {
+		background-position-y: -48px;
+	}
+	&.flag-bg {
+		background-position-y: -64px;
+	}
+	&.flag-hu {
+		background-position-y: -80px;
+	}
+	&.flag-cz {
+		background-position-y: -96px;
+	}
+	&.flag-it {
+		background-position-y: -112px;
+	}
+	&.flag-pl {
+		background-position-y: -128px;
+	}
+	&.flag-tr {
+		background-position-y: -144px;
+	}
+	&.flag-al {
+		background-position-y: -160px;
+	}
+}
+
+#page-footer-info,
+#page-footer-portals,
+#page-footer-social {
+	margin-bottom: 15px;
+}
