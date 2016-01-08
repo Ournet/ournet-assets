@@ -10,6 +10,7 @@ var js = assets.js(root);
 var img = assets.img(root);
 var css = assets.css(root);
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 
 // --------------- images -----------------
 
@@ -118,6 +119,13 @@ gulp.task('css-upload', function() {
 	});
 });
 
+gulp.task('connect', function () {
+  connect.server({
+    root: 'out',
+    port: 8044
+  });
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	gulp.watch('./src/js', ['js-out']);
@@ -125,6 +133,6 @@ gulp.task('watch', function() {
 	gulp.watch('./src/less', ['css-out']);
 });
 
-gulp.task('default', ['css-out', 'js-out', 'img-out', 'watch']);
+gulp.task('default', ['css-out', 'js-out', 'img-out', 'connect', 'watch']);
 
 gulp.task('upload', ['css-out', 'js-out', 'img-out', 'js-upload', 'img-upload', 'css-upload']);
