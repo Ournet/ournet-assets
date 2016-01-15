@@ -33,7 +33,7 @@ gulp.task('img-upload', function() {
 
 gulp.task('js-copy-news-main', function() {
 	return js.out({
-		src: ['./src/js/jquery.lazyload.js', './src/js/Popup.js', './src/js/sharedata.js'],
+		src: ['./src/js/jquery.lazyload.js'],
 		dest: './out/js/news',
 		name: 'main.js',
 		rev: true
@@ -128,11 +128,11 @@ gulp.task('connect', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-	gulp.watch('./src/js', ['js-out']);
-	gulp.watch('./src/img', ['img-out']);
-	gulp.watch('./src/less', ['css-out']);
+	gulp.watch('./src/js/**/*', ['js-out']);
+	gulp.watch('./src/img/**/*', ['img-out']);
+	gulp.watch('./src/less/**/*', ['css-out']);
 });
 
 gulp.task('default', ['css-out', 'js-out', 'img-out', 'connect', 'watch']);
 
-gulp.task('upload', ['css-out', 'js-out', 'img-out', 'js-upload', 'img-upload', 'css-upload']);
+gulp.task('upload', ['css-out', 'js-out', 'img-out', 'js-upload', 'css-upload', 'img-upload']);

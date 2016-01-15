@@ -335,25 +335,19 @@
 }
 
 .list.ot-story {
-	&.view-set {
+	&.view-row {
 		.item {
+			height: 194px;
+			margin-bottom: 10px;
 			a {
-				text-decoration: none;
+				text-decoration:none;
+			}
+			&:hover{
+				a{
+					color: @accent-color;
+				}
 			}
 		}
-	}
-}
-
-.item.hover-action {
-	padding: 5px 6px 6px 6px;
-	border-top: 3px solid #fff;
-	&:hover {
-		.transition(border-top-color .3s);
-		background-color: @layout-color;
-		.border-bottom-radius(3px);
-	}
-	&.domain-:hover {
-		border-top-color: darken(@layout-color, 5%);
 	}
 }
 

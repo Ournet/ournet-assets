@@ -70,10 +70,7 @@ angular.module('ournet.services', [])
 		conf.method = method.toUpperCase();
 		conf.responseType = config.type || "";
 
-		var data = {
-			ajaxcall: true,
-			ul: Config.ul
-		};
+		var data = {};
 		angular.extend(data, config.params);
 
 		conf.params = data;
