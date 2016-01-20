@@ -1,0 +1,62 @@
+.weather.content-box{
+	padding-top: 0px;
+}
+
+.weather-table {
+	border: 0;
+	border-spacing: 0;
+	width: 100%;
+	.no {
+		text-align: right;
+	}
+	td {
+		border-bottom: 1px solid #ddd;
+		padding: 3px;
+	}
+	.last-hour td {
+		border-bottom: 0;
+	}
+	.head {
+		padding: 0;
+		border-bottom: 0;
+		text-align: left;
+		div {
+			margin: 0;
+			background: @link-color;
+			color: #fff;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			padding: 1px;
+			#gradient > .vertical(lighten(@link-color, 6%); darken(@link-color, 6%));
+		}
+	}
+	thead th {
+		font-weight: normal;
+		font-size: 80%;
+		padding: 2px;
+	}
+	.hour {
+		font-size: 140%;
+	}
+	.symbol {
+		min-width: 60px;
+		max-width: 120px;
+		text-align: center;
+		img {
+			height: 42px;
+			width: 42px;
+		}
+	}
+	.symbol-name {
+		font-size: 90%;
+	}
+	.temperature {
+		font-size: 180%;
+		color: #005c9c;
+		max-width: 120px;
+	}
+	h4 {
+		margin: 0;
+		padding: 3px 6px;
+	}
+}

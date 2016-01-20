@@ -1,0 +1,19 @@
+.main-menu {
+    padding-left: 0;
+    list-style: none;
+    > li {
+        > a {
+            color: @text-color;
+            padding: 4px 8px 4px 6px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            &.selected {
+                color: @link-color;
+            }
+            &:hover{
+            	color: @link-color;
+            }
+        }
+    }
+}

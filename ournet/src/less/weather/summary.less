@@ -1,0 +1,37 @@
+#w-summary-menu {
+    .text-overflow();
+    margin: 0px;
+    li {
+        padding: 6px 12px;
+        cursor: pointer;
+        border-right: 1px solid darken(@layout-color, 5%);
+        border-top: @accent-border-width solid transparent;
+        &:hover {
+            background-color: darken(@layout-color, 5%);
+        }
+        &.selected {
+            background-color: #fff;
+            border-top-color: @accent-color;
+        }
+    }
+}
+
+.weather-summary {
+    td {
+        padding: 0 6px;
+        border-bottom: 1px solid #ddd;
+    }
+    .name {
+        font-weight: bold;
+    }
+    .temperature {
+        font-size: 140%;
+    }
+    .symbol img {
+        height: 32px;
+        width: 32px;
+    }
+    tr:last-child td{
+    	border-bottom: none;
+    }
+}
