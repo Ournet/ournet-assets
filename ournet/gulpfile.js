@@ -5,17 +5,148 @@ require('dotenv').load({
 });
 
 var root = 'ournet';
+var _ = require('lodash');
 var assets = require('../lib/assets');
 var js = assets.js(root);
 var img = assets.img(root);
 var css = assets.css(root);
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var del = require('del');
+
+var config = {
+	// js
+	'js-news-main': {
+		group: 'news',
+		type: 'js',
+		options: {
+			src: ['./src/js/jquery.lazyload.js'],
+			dest: './out/js/news',
+			name: 'main.js'
+		}
+	},
+	'js-weather-main': {
+		group: 'weather',
+		type: 'js',
+		options: {
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/bootstrap/js/affix.js'],
+			dest: './out/js/weather',
+			name: 'main.js'
+		}
+	},
+	'js-weather-page-widget': {
+		group: 'weather',
+		type: 'js',
+		options: {
+			src: ['../node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js', './src/js/weather/page-widget.js'],
+			dest: './out/js/weather',
+			name: 'page-widget.js'
+		}
+	},
+	'js-exchange-main': {
+		group: 'exchange',
+		type: 'js',
+		options: {
+			src: ['./src/js/exchange/app.js', './src/js/exchange/bootstrap/position.js', './src/js/exchange/our/services.js', './src/js/exchange/services.js', './src/js/exchange/our/directives.js', './src/js/exchange/controllers.js', './src/js/exchange/directives.js', './src/js/exchange/filters.js', './src/js/exchange/bootstrap/datepicker.js'],
+			dest: './out/js/exchange',
+			name: 'main.js'
+		}
+	},
+	// css
+	'css-news-main': {
+		group: 'news',
+		type: 'css',
+		options: {
+			src: ['./src/less/news/_main.less'],
+			dest: './out/css/news',
+			name: 'main.css'
+		}
+	},
+	'css-exchange-main': {
+		group: 'exchange',
+		type: 'css',
+		options: {
+			src: ['./src/less/exchange/_main.less'],
+			dest: './out/css/exchange',
+			name: 'main.css'
+		}
+	},
+	'css-weather-main': {
+		group: 'weather',
+		type: 'css',
+		options: {
+			src: ['./src/less/weather/_main.less'],
+			dest: './out/css/weather',
+			name: 'main.css'
+		}
+	},
+	'css-weather-page-widget': {
+		group: 'weather',
+		type: 'css',
+		options: {
+			src: ['./src/less/weather/_page-widget.less'],
+			dest: './out/css/weather',
+			name: 'page-widget.css'
+		}
+	}
+};
+
+function configAction(item, options) {
+	return function() {
+		if (item.type === 'js') {
+			return js.out(options);
+		}
+		return css.less(options);
+	};
+}
+
+function createTasks() {
+
+	var groups = {},
+		name, item, options;
+
+	for (name in config) {
+		item = config[name];
+
+		// default task:
+		options = _.clone(item.options);
+		var groupName = item.type;
+		groups[groupName] = groups[groupName] || [];
+		gulp.task(name, configAction(item, options));
+		groups[groupName].push(name);
+		if (item.group) {
+			groups[item.group] = groups[item.group] || [];
+			groups[item.group].push(name);
+		}
+
+		// prod task:
+		options = _.clone(item.options);
+		options.rev = true;
+		groupName = 'prod';
+		groups[groupName] = groups[groupName] || [];
+		gulp.task(name + '-' + groupName, configAction(item, options));
+		groups[groupName].push(name + '-' + groupName);
+		if (item.group) {
+			groups[item.group + '-' + groupName] = groups[item.group + '-' + groupName] || [];
+			groups[item.group + '-' + groupName].push(name + '-' + groupName);
+		}
+	}
+
+	for (name in groups) {
+		gulp.task(name, groups[name]);
+	}
+}
+
+createTasks();
+
+gulp.task('clean', function() {
+	return del(['out']);
+});
 
 // --------------- images -----------------
 
 // Copy all static images
-gulp.task('img-out', function() {
+gulp.task('img', function() {
 	return img.out({
 		src: './src/img/**/*',
 		dest: './out/img'
@@ -31,44 +162,6 @@ gulp.task('img-upload', function() {
 
 // --------------- js -----------------
 
-gulp.task('js-copy-news-main', function() {
-	return js.out({
-		src: ['./src/js/jquery.lazyload.js'],
-		dest: './out/js/news',
-		name: 'main.js',
-		rev: true
-	});
-});
-
-gulp.task('js-copy-weather-main', function() {
-	return js.out({
-		src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/bootstrap/js/affix.js'],
-		dest: './out/js/weather',
-		name: 'main.js',
-		rev: true
-	});
-});
-
-gulp.task('js-copy-exchange-main', function() {
-	return js.out({
-		src: ['./src/js/exchange/app.js', './src/js/exchange/bootstrap/position.js', './src/js/exchange/our/services.js', './src/js/exchange/services.js', './src/js/exchange/our/directives.js', './src/js/exchange/controllers.js', './src/js/exchange/directives.js', './src/js/exchange/filters.js', './src/js/exchange/bootstrap/datepicker.js'],
-		dest: './out/js/exchange',
-		name: 'main.js',
-		rev: true
-	});
-});
-
-gulp.task('js-copy-weather-page-widget', function() {
-	return js.out({
-		src: ['../node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js', './src/js/weather/page-widget.js'],
-		dest: './out/js/weather',
-		name: 'page-widget.js',
-		rev: true
-	});
-});
-
-gulp.task('js-out', ['js-copy-news-main', 'js-copy-exchange-main', 'js-copy-weather-main', 'js-copy-weather-page-widget']);
-
 gulp.task('js-upload', function() {
 	return js.s3({
 		src: './out/js/**/*.min.js',
@@ -77,41 +170,6 @@ gulp.task('js-upload', function() {
 });
 
 // --------------- css -----------------
-
-gulp.task('css-news-main', function() {
-	return css.less({
-		src: ['./src/less/news/_main.less'],
-		dest: './out/css/news',
-		name: 'main.css',
-		rev: true
-	});
-});
-gulp.task('css-exchange-main', function() {
-	return css.less({
-		src: ['./src/less/exchange/_main.less'],
-		dest: './out/css/exchange',
-		name: 'main.css',
-		rev: true
-	});
-});
-gulp.task('css-weather-main', function() {
-	return css.less({
-		src: ['./src/less/weather/_main.less'],
-		dest: './out/css/weather',
-		name: 'main.css',
-		rev: true
-	});
-});
-gulp.task('css-weather-widget', function() {
-	return css.less({
-		src: ['./src/less/weather/_page-widget.less'],
-		dest: './out/css/weather',
-		name: 'page-widget.css',
-		rev: true
-	});
-});
-
-gulp.task('css-out', ['css-news-main', 'css-exchange-main', 'css-weather-main', 'css-weather-widget']);
 
 gulp.task('css-upload', function() {
 	return css.s3({
@@ -129,11 +187,11 @@ gulp.task('connect', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-	gulp.watch('./src/js/**/*', ['js-out']);
-	gulp.watch('./src/img/**/*', ['img-out']);
-	gulp.watch('./src/less/**/*', ['css-out']);
+	gulp.watch('./src/js/**/*', ['js']);
+	gulp.watch('./src/img/**/*', ['img']);
+	gulp.watch('./src/less/**/*', ['css']);
 });
 
-gulp.task('default', ['css-out', 'js-out', 'img-out', 'connect', 'watch']);
+gulp.task('default', ['css', 'js', 'img', 'connect', 'watch']);
 
-gulp.task('upload', ['css-out', 'js-out', 'img-out', 'js-upload', 'css-upload', 'img-upload']);
+gulp.task('upload', ['js-upload', 'css-upload', 'img-upload']);
