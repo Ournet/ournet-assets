@@ -8,9 +8,11 @@
 			if (currentScrollTop === 0 || pastScrollTop === 0 && currentScrollTop >= 0 && currentScrollTop !== pastScrollTop) {
 				console.log('aici', currentScrollTop, pastScrollTop);
 				if (currentScrollTop > 0) {
-					$('#page-header').addClass('active');
+					$('#page-header').removeClass('trans');
+					$('#page-header').addClass('solid');
 				} else {
-					$('#page-header').removeClass('active');
+					$('#page-header').removeClass('solid');
+					$('#page-header').addClass('trans');
 				}
 				pastScrollTop = currentScrollTop;
 			}

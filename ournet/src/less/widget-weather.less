@@ -1,35 +1,65 @@
 #widget-weather {
-  float: right;
-  text-align: right;
-  padding-top: 8px;
-  .symbol {
+    position: relative;
     float: right;
-    padding-top: 1px;
-    width: 32px;
-    height: 32px;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  .name {
-    font-size: 120%;
-    font-weight: bold;
-    color: @second-color;
-    display: inline-block;
-    margin-top: 2px;
-    padding-right: 10px;
-    a {
-      color: @second-color;
-      display: inline-block;
-      margin-top: 5px;
-      vertical-align: top;
-      margin-right: 5px;
+    text-align: right;
+    height: 60px;
+    padding: 10px 20px;
+    margin-right: -15px;
+    .symbol {
+        float: right;
+        padding-top: 1px;
+        width: 32px;
+        height: 32px;
     }
-    .no {
-      color: #435A66;
-      font-size: 150%;
-      text-shadow: 2px 2px 3px #EEE;
+    img {
+        max-width: 100%;
+        height: auto;
     }
-  }
+    .name {
+        font-size: 120%;
+        font-weight: bold;
+        color: #fff;
+        display: inline-block;
+        margin-top: 2px;
+        padding-right: 10px;
+        a {
+            color: #fff;
+            display: inline-block;
+            margin-top: 5px;
+            vertical-align: top;
+            margin-right: 5px;
+        }
+        .no {
+            font-size: 150%;
+        }
+    }
+    .background {
+        position: absolute;
+        background-position: center center;
+        background-size: cover;
+        opacity: .9;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+    }
+}
+
+.solid #widget-weather {
+    .shadow {
+        #gradient > .vertical(rgba(0, 0, 0, 0);rgba(0, 0, 0, 0.7));
+        position: absolute;
+        bottom: 0px;
+        top: 45%;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+    }
+}
+
+.trans #widget-weather {
+    .background {
+        display: none;
+    }
 }
