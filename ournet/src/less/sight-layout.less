@@ -5,6 +5,7 @@
     margin-bottom: 10px;
     h1 {
         margin: 0px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .9);
     }
 }
 
@@ -13,8 +14,17 @@
     background-position: center center;
     background-size: cover;
     opacity: .9;
-    top:0px;
+    top: 0px;
     bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#sight-shadow {
+    #gradient > .vertical(rgba(0, 0, 0, 0); rgba(0, 0, 0, 0.7));
+    position: absolute;
+    bottom: 0px;
+    top: 45%;
     left: 0px;
     right: 0px;
 }

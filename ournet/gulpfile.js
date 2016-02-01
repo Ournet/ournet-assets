@@ -42,7 +42,7 @@ gulp.task('js-copy-news-main', function() {
 
 gulp.task('js-copy-weather-main', function() {
 	return js.out({
-		src: ['./src/js/jquery.lazyload.js', './src/js/Popup.js', './src/js/sharedata.js', './src/js/weather/weather-dates.js', './src/js/bootstrap/affix.js'],
+		src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/bootstrap/js/affix.js'],
 		dest: './out/js/weather',
 		name: 'main.js',
 		rev: true
@@ -60,7 +60,7 @@ gulp.task('js-copy-exchange-main', function() {
 
 gulp.task('js-copy-weather-page-widget', function() {
 	return js.out({
-		src: ['./src/js/jquery.autocomplet.min.js', './src/js/weather/page-widget.js'],
+		src: ['../node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js', './src/js/weather/page-widget.js'],
 		dest: './out/js/weather',
 		name: 'page-widget.js',
 		rev: true
@@ -104,8 +104,9 @@ gulp.task('css-weather-main', function() {
 });
 gulp.task('css-weather-widget', function() {
 	return css.less({
-		src: ['./src/less/weather/weather-widget.less'],
+		src: ['./src/less/weather/_page-widget.less'],
 		dest: './out/css/weather',
+		name: 'page-widget.css',
 		rev: true
 	});
 });
@@ -119,11 +120,11 @@ gulp.task('css-upload', function() {
 	});
 });
 
-gulp.task('connect', function () {
-  connect.server({
-    root: 'out',
-    port: 8044
-  });
+gulp.task('connect', function() {
+	connect.server({
+		root: 'out',
+		port: 8044
+	});
 });
 
 // Rerun the task when a file changes

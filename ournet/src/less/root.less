@@ -7,20 +7,9 @@ body {
 	background-color: @layout-color;
 	-webkit-font-smoothing: antialiased;
 }
-body,html {
-	height: 100%;
-	overflow: hidden;
-}
 
 main {
-	height: 100%;
-  -webkit-perspective: 100px;
-  perspective: 100px;
-  -webkit-perspective-origin: 0 0;
-  perspective-origin: 0 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
+  display: block;
 }
 
 input,
@@ -40,6 +29,10 @@ textarea {
 	.border-radius(3px);
 	padding: 4px 6px;
 	border: 1px solid #ddd;
+}
+
+fieldset{
+	border: none;
 }
 
 a {

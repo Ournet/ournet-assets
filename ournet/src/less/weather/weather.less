@@ -1,174 +1,181 @@
-.content-box{
-	background-color: #fff;
-	-webkit-box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  padding: 10px;
+.content-box {
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    padding: 10px;
 }
 
 #widget-w-link {
-	float: right;
-	display: inline-block;
-	padding-left: 22px;
-	margin-top: 14px;
-	position: relative;
-	.icon {
-		top: 1px;
-		left: 0px;
-		background-position: -20px 0px;
-	}
+    float: right;
+    display: inline-block;
+    padding-left: 22px;
+    margin-top: 14px;
+    position: relative;
+    .icon {
+        top: 1px;
+        left: 0px;
+        background-position: -20px 0px;
+    }
 }
 
 #page-content-right {
-	position: relative;
-	.affix {
-		top: 0px;
-	}
-	.affix-bottom {
-		//bottom: 200px;
-		position: absolute;
-	}
+    /*position: relative;*/
+    .affix-top {
+        position: static;
+    }
+    .affix {
+        top: 5px;
+        position: fixed;
+    }
+    .affix-bottom {
+        //bottom: 200px;
+        position: absolute;
+    }
 }
 
 table {
-	width: 100%;
-	border: 0;
-	border-spacing: 0;
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
 }
 
 .wind-dir {
-	text-align: center;
-	.wind-img {
-		width: 18px;
-		height: 18px;
-		opacity: .8;
-		background-image: url('http://assets.ournetcdn.net/root/img/icons/weather/32-wind-arrow.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-		display: inline-block;
-	}
+    text-align: center;
+    .wind-img {
+        width: 18px;
+        height: 18px;
+        opacity: .8;
+        background-image: url('http://assets.ournetcdn.net/root/img/icons/weather/32-wind-arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
 }
 
 .wind-img-SE {
-	.rotate(-135deg)
+    .rotate(-135deg)
 }
 
 .wind-img-S {
-	.rotate(-90deg)
+    .rotate(-90deg)
 }
 
 .wind-img-SW {
-	.rotate(-45deg)
+    .rotate(-45deg)
 }
 
 .wind-img-E {
-	.rotate(180deg)
+    .rotate(180deg)
 }
 
 .wind-img-NW {
-	.rotate(45deg)
+    .rotate(45deg)
 }
 
 .wind-img-N {
-	.rotate(90deg)
+    .rotate(90deg)
 }
 
 .wind-img-NE {
-	.rotate(135deg)
+    .rotate(135deg)
 }
 
 .w-icon {
-	width: 40px;
-	height: 40px;
-	display: inline-block;
-	background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-wb.png') 0 0 no-repeat;
-	&.night {
-		background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-night-wb.png') 0 0 no-repeat;
-	}
-	&.wi2 {
-		background-position: -40px 0;
-	}
-	&.wi3 {
-		background-position: -80px 0;
-	}
-	&.wi4 {
-		background-position: -120px 0;
-	}
-	&.wi5 {
-		background-position: -160px 0;
-	}
-	&.wi6 {
-		background-position: -200px 0;
-	}
-	&.wi7 {
-		background-position: -240px 0;
-	}
-	&.wi8 {
-		background-position: -280px 0;
-	}
-	&.wi9 {
-		background-position: -320px 0;
-	}
-	&.wi10 {
-		background-position: -360px 0;
-	}
-	&.wi11 {
-		background-position: -400px 0;
-	}
-	&.wi12 {
-		background-position: -440px 0;
-	}
-	&.wi13 {
-		background-position: -480px 0;
-	}
-	&.wi14 {
-		background-position: -520px 0;
-	}
-	&.wi15 {
-		background-position: -560px 0;
-	}
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-wb.png') 0 0 no-repeat;
+    &.night {
+        background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-night-wb.png') 0 0 no-repeat;
+    }
+    &.wi2 {
+        background-position: -40px 0;
+    }
+    &.wi3 {
+        background-position: -80px 0;
+    }
+    &.wi4 {
+        background-position: -120px 0;
+    }
+    &.wi5 {
+        background-position: -160px 0;
+    }
+    &.wi6 {
+        background-position: -200px 0;
+    }
+    &.wi7 {
+        background-position: -240px 0;
+    }
+    &.wi8 {
+        background-position: -280px 0;
+    }
+    &.wi9 {
+        background-position: -320px 0;
+    }
+    &.wi10 {
+        background-position: -360px 0;
+    }
+    &.wi11 {
+        background-position: -400px 0;
+    }
+    &.wi12 {
+        background-position: -440px 0;
+    }
+    &.wi13 {
+        background-position: -480px 0;
+    }
+    &.wi14 {
+        background-position: -520px 0;
+    }
+    &.wi15 {
+        background-position: -560px 0;
+    }
 }
 
 #user-location {
-	font-size: 90%;
-	padding: 10px 0px;
-	color: #999;
-	a {
-		color: #999;
-	}
+    font-size: 90%;
+    padding: 10px 0px;
+    color: #999;
+    a {
+        color: #999;
+    }
 }
 
 #weather-source-footer {
-	position: relative;
-	background: #eee;
-	line-height: 16px;
-	padding: 10px;
-	color: #555;
-	margin-bottom: 10px;
+    position: relative;
+    background: #eee;
+    line-height: 16px;
+    padding: 10px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 #yr-logo {
-	display: block;
-	width: 120px;
-	height: 36px;
-	float: right;
-	right: 10px;
-	background: url('http://www.yr.no/grafikk/yr-logo.png') center center no-repeat;
-	.opacity(.6);
-	position: absolute;
-	top: 0;
+    display: block;
+    width: 120px;
+    height: 36px;
+    float: right;
+    right: 10px;
+    background: url('http://www.yr.no/grafikk/yr-logo.png') center center no-repeat;
+    .opacity(.6);
+    position: absolute;
+    top: 0;
 }
+
+
 /*      widget      */
 
 .form-table {
-	td, th {
-		padding: 3px;
-	}
-	select {
-		padding: 4px 6px;
-		border: 1px solid #ddd;
-		.border-radius(3px);
-	}
-	button {
-		padding: 6px 12px;
-	}
+    td,
+    th {
+        padding: 3px;
+    }
+    select {
+        padding: 4px 6px;
+        border: 1px solid #ddd;
+        .border-radius(3px);
+    }
+    button {
+        padding: 6px 12px;
+    }
 }
