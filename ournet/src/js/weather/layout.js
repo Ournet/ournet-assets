@@ -1,5 +1,12 @@
 (function(d, w) {
-	$(d).ready(function() {
+
+	function searchEnable() {
+		$('#search-btn').click(function() {
+			$('#q-form').submit();
+		});
+	}
+
+	function scrollEnable() {
 		var currentScrollTop = 0;
 		var pastScrollTop = 0;
 
@@ -20,5 +27,10 @@
 		$(w).scroll(onChangedScroll);
 
 		onChangedScroll();
+	}
+
+	$(d).ready(function() {
+		searchEnable();
+		scrollEnable();
 	});
 })(document, window);
