@@ -1,23 +1,13 @@
 #page-header {
-    padding-left: 10px;
-    position: fixed;
     width: 100%;
-    z-index: 10;
     display: block;
-    top: 0px;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-transition-property: background-color, -webkit-box-shadow;
-    transition-property: background-color, box-shadow;
-    -webkit-transition: .2s ease-out;
-    transition: .2s ease-out;
 }
 
 #header-logo {
     float: left;
-    width: 160px;
-    display: inline-block;
-    height: 55px;
+    min-width: 120px;
+    display: block;
+    height: @page-header-heigth - 5;
     margin-top: 5px;
     background-position: 0 8px;
     background-repeat: no-repeat;
@@ -25,7 +15,6 @@
 
 #header-search {
     float: left;
-    height: 40px;
     padding-top: 15px;
     #q-form {
         position: relative;

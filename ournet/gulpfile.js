@@ -75,8 +75,17 @@ var config = {
 		group: 'weather',
 		type: 'css',
 		options: {
-			src: ['./src/less/weather/_main.less'],
-			dest: './out/css/weather',
+			src: ['./src/less/weather/_main_desktop.less'],
+			dest: './out/css/weather/desktop',
+			name: 'main.css'
+		}
+	},
+	'css-weather-main_mobile': {
+		group: 'weather',
+		type: 'css',
+		options: {
+			src: ['./src/less/weather/_main_mobile.less'],
+			dest: './out/css/weather/mobile',
 			name: 'main.css'
 		}
 	},
