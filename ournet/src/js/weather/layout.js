@@ -29,8 +29,18 @@
 		onChangedScroll();
 	}
 
+	function affixEnable() {
+		$('#affix-right-region').affix({
+			offset: {
+				top: $('#affix-right-region').offset().top - 60,
+				bottom: 200
+			}
+		});
+	}
+
 	$(d).ready(function() {
 		searchEnable();
 		scrollEnable();
+		affixEnable();
 	});
 })(document, window);

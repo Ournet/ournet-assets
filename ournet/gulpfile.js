@@ -30,7 +30,16 @@ var config = {
 		type: 'js',
 		options: {
 			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/bootstrap/js/affix.js'],
-			dest: './out/js/weather',
+			dest: './out/js/weather/desktop',
+			name: 'main.js'
+		}
+	},
+	'js-weather-main_mobile': {
+		group: 'weather',
+		type: 'js',
+		options: {
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js'],
+			dest: './out/js/weather/mobile',
 			name: 'main.js'
 		}
 	},
