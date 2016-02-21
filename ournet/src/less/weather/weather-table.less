@@ -1,62 +1,83 @@
-.weather.content-box{
-	padding-top: 0px;
+@report-summary-height: 40px;
+@report-details-row-height: 40px;
+@report-wi-size: 40px;
+.weather-table {
+    line-height: 1;
+    .wi {
+        font-size: @report-wi-size;
+        vertical-align: middle;
+        margin-right: 15px;
+        width: 42px;
+    }
 }
 
-.weather-table {
-	border: 0;
-	border-spacing: 0;
-	width: 100%;
-	.no {
-		text-align: right;
-	}
-	td {
-		border-bottom: 1px solid #ddd;
-		padding: 3px;
-	}
-	.last-hour td {
-		border-bottom: 0;
-	}
-	.head {
-		padding: 0;
-		border-bottom: 0;
-		text-align: left;
-		div {
-			margin: 0;
-			background: @link-color;
-			color: #fff;
-			-moz-border-radius: 2px;
-			border-radius: 2px;
-			padding: 1px;
-			#gradient > .vertical(lighten(@link-color, 6%); darken(@link-color, 6%));
-		}
-	}
-	thead th {
-		font-weight: normal;
-		font-size: 80%;
-		padding: 2px;
-	}
-	.hour {
-		font-size: 140%;
-	}
-	.symbol {
-		min-width: 60px;
-		max-width: 120px;
-		text-align: center;
-		img {
-			height: 42px;
-			width: 42px;
-		}
-	}
-	.symbol-name {
-		font-size: 90%;
-	}
-	.temperature {
-		font-size: 180%;
-		color: #005c9c;
-		max-width: 120px;
-	}
-	h4 {
-		margin: 0;
-		padding: 3px 6px;
-	}
+.wt-head {
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.wt-body {
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.wt-row {
+    border-bottom: 1px solid darken(@layout-color, 5%);
+    background-color: #fff;
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.wt-col {
+    height: 100%;
+    float: left;
+    min-height: 2px;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wt-date {
+    width: 20%;
+}
+
+.wt-temp {
+    width: 40%;
+}
+
+.wt-precip {
+    width: 15%;
+    text-align: center;
+}
+
+.wt-wind {
+    width: 25%;
+    text-align: right;
+}
+
+.report-summary {
+    height: @report-summary-height;
+    cursor: pointer;
+    &.closed {
+        display: none;
+    }
+    .wi {
+        
+    }
+}
+
+.report-details {
+    display: none;
+    &.opened {
+        display: block;
+    }
 }

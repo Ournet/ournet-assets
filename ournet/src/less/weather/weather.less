@@ -4,99 +4,6 @@ table {
     border-spacing: 0;
 }
 
-.wind-dir {
-    text-align: center;
-    .wind-img {
-        width: 18px;
-        height: 18px;
-        opacity: .8;
-        background-image: url('http://assets.ournetcdn.net/root/img/icons/weather/32-wind-arrow.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        display: inline-block;
-    }
-}
-
-.wind-img-SE {
-    .rotate(-135deg)
-}
-
-.wind-img-S {
-    .rotate(-90deg)
-}
-
-.wind-img-SW {
-    .rotate(-45deg)
-}
-
-.wind-img-E {
-    .rotate(180deg)
-}
-
-.wind-img-NW {
-    .rotate(45deg)
-}
-
-.wind-img-N {
-    .rotate(90deg)
-}
-
-.wind-img-NE {
-    .rotate(135deg)
-}
-
-.w-icon {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-wb.png') 0 0 no-repeat;
-    &.night {
-        background: url('http://assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-night-wb.png') 0 0 no-repeat;
-    }
-    &.wi2 {
-        background-position: -40px 0;
-    }
-    &.wi3 {
-        background-position: -80px 0;
-    }
-    &.wi4 {
-        background-position: -120px 0;
-    }
-    &.wi5 {
-        background-position: -160px 0;
-    }
-    &.wi6 {
-        background-position: -200px 0;
-    }
-    &.wi7 {
-        background-position: -240px 0;
-    }
-    &.wi8 {
-        background-position: -280px 0;
-    }
-    &.wi9 {
-        background-position: -320px 0;
-    }
-    &.wi10 {
-        background-position: -360px 0;
-    }
-    &.wi11 {
-        background-position: -400px 0;
-    }
-    &.wi12 {
-        background-position: -440px 0;
-    }
-    &.wi13 {
-        background-position: -480px 0;
-    }
-    &.wi14 {
-        background-position: -520px 0;
-    }
-    &.wi15 {
-        background-position: -560px 0;
-    }
-}
-
 #weather-source-footer {
     position: relative;
     background: #eee;
@@ -116,6 +23,11 @@ table {
     .opacity(.6);
     position: absolute;
     top: 0;
+}
+
+.wi {
+    color: @link-color;
+    font-weight: bold;
 }
 
 

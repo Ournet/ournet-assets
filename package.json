@@ -4,7 +4,8 @@
   "description": "Ournet assets project",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "weather-icons": "github:erikflowers/weather-icons"
   },
   "devDependencies": {
     "del": "^2.2.0",
