@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="100" height="10" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>lines</title>
+  <rect id="line_0" class="line-0" height="100%" width="10%" fill="#9db49f"/>
+  <rect id="line_1" class="line-1" height="100%" width="10%" x="10%" fill="#e46f61"/>
+  <rect id="line_2" class="line-2" height="100%" width="10%" x="20%" fill="#875f8d"/>
+  <rect id="line_3" class="line-3" height="100%" width="10%" x="30%" fill="#c84697"/>
+  <rect id="line_4" class="line-4" height="100%" width="10%" x="40%" fill="#95b464"/>
+  <rect id="line_5" class="line-5" height="100%" width="10%" x="50%" fill="#2e9b97"/>
+  <rect id="line_6" class="line-6" height="100%" width="10%" x="60%" fill="#db7723"/>
+  <rect id="line_7" class="line-7" height="100%" width="10%" x="70%" fill="#6f85bf"/>
+  <rect id="line_8" class="line-8" height="100%" width="10%" x="80%" fill="#3d80b9"/>
+  <rect id="line_9" class="line-9" height="100%" width="10%" x="90%" fill="#72778c"/>
+ </g>
+</svg>

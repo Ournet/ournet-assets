@@ -1,48 +1,92 @@
 #page-header {
     width: 100%;
     display: block;
+    padding: 15px 0px;
+    margin-bottom: 15px;
+    &:after {
+        clear: both;
+        content: '';
+        display: table
+    }
 }
 
 #header-logo {
-    min-width: 120px;
-    display: block;
-    height: @page-header-heigth - 5;
-    margin-top: 5px;
-    background-position: 0 8px;
-    background-repeat: no-repeat;
+    height: @header-height;
 }
 
+#logo {
+    display: block;
+    height: 100%;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-image: url('//assets.ournetcdn.net/ournet/img/logos/ournet-logo.png');
+}
+
+.country-md #logo {
+    background-image: url('//assets.ournetcdn.net/ournet/img/logos/click-logo.png');
+}
+
+.country-ru #logo {
+    background-image: url('//assets.ournetcdn.net/ournet/img/logos/zborg-logo.png');
+}
+
+.country-pl #logo {
+    background-image: url('//assets.ournetcdn.net/ournet/img/logos/diez-logo.png');
+}
+
+.country-al #logo {
+    background-image: url('//assets.ournetcdn.net/ournet/img/logos/moti2-logo.png');
+}
+
+#header-data {}
+
+#header-widgets {}
+
 #header-search {
-    float: left;
-    padding-top: 15px;
-    #q-form {
-        position: relative;
-        height: 30px;
+    height: @header-height;
+    padding-top: @header-height/2 - 30/2;
+    position: relative;
+    cursor: pointer;
+}
+
+#q {
+    outline: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    background: #fff;
+    padding: 4px 7px;
+    .border-radius(3px);
+}
+
+#search-form {
+    position: relative;
+    display: block;
+}
+
+#search-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 25px;
+    width: 24px;
+    display: inline-block;
+    text-decoration: none;
+    i {
+        background-position: 0 0px;
+        width: 18px;
+        height: 18px;
+        top: 4px;
+        left: 2px;
     }
-    #q {
-        outline: 0;
-        border: 1px solid #ccc;
-        width: 100%;
-        background: #fff;
-        padding: 4px 7px;
-        float: left;
-        .border-radius(3px);
-    }
-    #search-btn {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        height: 25px;
-        width: 24px;
-        display: inline-block;
-        text-decoration: none;
-        background: transparent;
-        .icon {
-            background-position: 0 0px;
-            width: 18px;
-            height: 18px;
-            top: 4px;
-            left: 2px;
-        }
-    }
+}
+
+#top-line {
+    height: 6px;
+}
+
+.accent-line {
+    background-size: cover;
+    background-image: url('//assets.ournetcdn.net/ournet/img/accent-line.svg');
+    display: block;
+    height: 100%;
 }
