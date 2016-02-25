@@ -29,7 +29,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/bootstrap/js/affix.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js','./src/js/weather/weather-table.js', '../node_modules/bootstrap/js/affix.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}

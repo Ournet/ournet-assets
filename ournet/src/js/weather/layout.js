@@ -17,6 +17,6 @@
 
 	$(d).ready(function() {
 		searchEnable();
-		affixEnable();
+		// affixEnable();
 	});
 })(document, window);
