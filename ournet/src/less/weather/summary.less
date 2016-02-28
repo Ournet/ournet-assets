@@ -8,31 +8,28 @@
         border-top: @accent-border-width solid transparent;
         background-color: darken(@layout-color, 5%);
         &:hover {
-            border-top-color: @accent-color;
+            border-top-color: @link-color;
         }
         &.selected {
             background-color: #fff;
-            border-top-color: @accent-color;
+            border-top-color: @link-color;
         }
     }
 }
 
 .weather-summary {
-    td {
-        padding: 0 6px;
-        border-bottom: 1px solid #ddd;
+    .wt-body:last-child .wt-col {
+        border-bottom: none;
     }
-    .name {
+    .w-icon {
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+    .wt-col {
+        border-bottom: 1px solid darken(@layout-color, 10%);
+    }
+    .wt-name {
         font-weight: bold;
-    }
-    .temperature {
-        font-size: 140%;
-    }
-    .symbol img {
-        height: 32px;
-        width: 32px;
-    }
-    tr:last-child td{
-    	border-bottom: none;
+        width: 30%;
     }
 }

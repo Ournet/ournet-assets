@@ -2,22 +2,24 @@
 	function enable() {
 		// details head
 		$('.wt-head').click(function() {
-			var details = $(this).parent();
-			var summary = details.prev();
+			var details = $(this).parent().parent();
+			var summary = details.next();
 			summary.removeClass('closed');
-			// $('.report-summary.closed', body)
-			// 	.each(function() {
-			// 		$(this).removeClass('closed');
-			// 	});
-			details.removeClass('opened');
+			details.slideUp(function() {
+				details.removeClass('opened');
+				details.attr('style', null);
+			});
 		});
 
 		// symmary
 		$('.report-summary').click(function() {
 			var summary = $(this);
-			var details = summary.next();
-			summary.addClass('closed')
-			details.addClass('opened');
+			var details = summary.prev();
+			summary.addClass('closed');
+			details.slideDown(function() {
+				details.addClass('opened');
+				details.attr('style', null);
+			});
 		});
 	}
 

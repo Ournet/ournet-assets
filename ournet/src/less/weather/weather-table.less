@@ -1,9 +1,11 @@
 @report-summary-height: 40px;
 @report-details-row-height: 40px;
 @report-wi-size: 40px;
+@dark-layout-color: darken(@layout-color, 20%);
 .weather-table {
     /*display: table;*/
     width: 100%;
+    overflow: hidden;
     .w-icon {
         vertical-align: middle;
         margin-right: 15px;
@@ -12,12 +14,14 @@
 
 .wt-head {
     font-size: 90%;
-    background-color: darken(@layout-color, 5%);
+    /*background-color: darken(@layout-color, 5%);*/
+    background-color: @link-color;
     display: table-row;
     cursor: pointer;
     border: none;
+    color: #fff;
     &:hover {
-        background-color: darken(@layout-color, 8%);
+        background-color: darken(@link-color, 5%);
     }
     &:after {
         clear: both;
@@ -27,11 +31,30 @@
 }
 
 .wt-body {
-    /*display: table-row-group;*/
-    &:after {
-        clear: both;
-        content: '';
-        display: table;
+    display: table;
+    width: 100%;
+}
+
+.wt-footer {
+    font-size: 90%;
+    padding: 4px 10px;
+    background-color: darken(@layout-color, 4%);
+    border-top: 1px solid darken(@layout-color, 6%);
+    > div {
+        position: relative;
+        padding-left: 12px;
+        &:before {
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: @accent-color;
+            content: " ";
+            display: table;
+        }
     }
 }
 
@@ -48,10 +71,9 @@
     display: table-cell;
     /*height: @report-summary-height + 10;*/
     min-height: 2px;
-    overflow: hidden;
     padding: 5px;
     vertical-align: middle;
-    white-space: nowrap;
+    .text-overflow();
 }
 
 .wt-date {
@@ -71,7 +93,7 @@
 
 .temp,
 .temp-night {
-    font-size: 200%;
+    font-size: 180%;
     display: inline-block;
     vertical-align: middle;
 }
@@ -81,7 +103,7 @@
 }
 
 .temp-night {
-    color: darken(@layout-color, 10%);
+    color: @dark-layout-color;
 }
 
 .wt-precip {
@@ -94,40 +116,124 @@
     text-align: right;
 }
 
+.wind-speed {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0px 3px;
+    cursor: default;
+    /*background-color: @layout-color;*/
+}
+
+.wind-dir {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 140%;
+    color: @dark-layout-color;
+    vertical-align: middle;
+    line-height: 0;
+    margin-left: 6px;
+}
+
+.beaufort-4 {
+    background-color: lighten(@accent-color, 40%);
+}
+
+.beaufort-5 {
+    background-color: lighten(@accent-color, 35%);
+}
+
+.beaufort-6 {
+    background-color: lighten(@accent-color, 30%);
+}
+
+.beaufort-7 {
+    background-color: lighten(@accent-color, 25%);
+}
+
+.beaufort-8 {
+    background-color: lighten(@accent-color, 20%);
+}
+
+.beaufort-9 {
+    background-color: lighten(@accent-color, 15%);
+    color: #fff;
+}
+
+.beaufort-10 {
+    background-color: lighten(@accent-color, 10%);
+    color: #fff;
+}
+
+.beaufort-11 {
+    background-color: lighten(@accent-color, 5%);
+    color: #fff;
+}
+
 .report-summary {
     /*height: @report-summary-height;*/
-    display: table;
-    width: 100%;
+    display: block;
     cursor: pointer;
     margin: 5px 0px;
-    border-top: 2px solid darken(@layout-color, 5%);
-    border-bottom: 1px solid darken(@layout-color, 6%);
-    background-color: lighten(@layout-color, 8%);
+    border-top: 1px solid darken(@layout-color, 5%);
+    border-bottom: 2px solid darken(@layout-color, 6%);
+    background-color: #fff;
     &.closed {
         display: none;
     }
-    .wi {}
     .date {
         font-size: 80%;
+    }
+    &:hover {
+        .wt-date {
+            color: @link-color;
+        }
     }
 }
 
 .report-details {
     display: none;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid darken(@layout-color, 5%);
     &.opened {
-        display: table;
-        width: 100%;
-    }
-    .wt-col {
-        border-bottom: 1px solid darken(@layout-color, 5%);
+        display: block;
     }
     .wt-row {
         background-color: #fff;
+        .wt-col {
+            border-bottom: 1px solid darken(@layout-color, 5%);
+        }
     }
 }
 
 .table {
     display: table;
     width: 100%;
+}
+
+.wind-dir-SE {
+    .rotate(-135deg)
+}
+
+.wind-dir-S {
+    .rotate(-90deg)
+}
+
+.wind-dir-SW {
+    .rotate(-45deg)
+}
+
+.wind-dir-E {
+    .rotate(180deg)
+}
+
+.wind-dir-NW {
+    .rotate(45deg)
+}
+
+.wind-dir-N {
+    .rotate(90deg)
+}
+
+.wind-dir-NE {
+    .rotate(135deg)
 }
