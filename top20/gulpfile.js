@@ -16,14 +16,14 @@ var del = require('del');
 
 var config = {
 	// js
-	// 'js-main': {
-	// 	type: 'js',
-	// 	options: {
-	// 		src: ['./src/js/app.js', './src/js/bootstrap/position.js', './src/js/our/services.js', './src/js/exchange/services.js', './src/js/exchange/our/directives.js', './src/js/exchange/controllers.js', './src/js/exchange/directives.js', './src/js/exchange/filters.js', './src/js/exchange/bootstrap/datepicker.js'],
-	// 		dest: './out/js',
-	// 		name: 'main.js'
-	// 	}
-	// },
+	'js-website': {
+		type: 'js',
+		options: {
+			src: ['./src/js/edit-website.js'],
+			dest: './out/js',
+			name: 'website.js'
+		}
+	},
 	// css
 	'css-main': {
 		type: 'css',
@@ -136,6 +136,6 @@ gulp.task('watch', function() {
 	gulp.watch('./src/less/**/*', ['css']);
 });
 
-gulp.task('default', ['css', 'img', 'connect', 'watch']);
+gulp.task('default', ['css', 'js', 'img', 'connect', 'watch']);
 
 gulp.task('upload', ['js-upload', 'css-upload', 'img-upload']);

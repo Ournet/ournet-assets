@@ -16,7 +16,8 @@
     font-size: 90%;
     /*background-color: darken(@layout-color, 5%);*/
     background-color: @link-color;
-    display: table-row;
+    display: table;
+    width: 100%;
     cursor: pointer;
     border: none;
     color: #fff;
@@ -27,6 +28,9 @@
         clear: both;
         content: '';
         display: table;
+    }
+    .wt-date {
+        width: 35%;
     }
 }
 
@@ -117,7 +121,7 @@
 }
 
 .wt-pressure {
-    text-align: center;
+    text-align: right;
 }
 
 .wind-speed {
