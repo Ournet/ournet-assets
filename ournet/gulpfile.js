@@ -20,8 +20,8 @@ var config = {
 		group: 'news',
 		type: 'js',
 		options: {
-			src: ['./src/js/jquery.lazyload.js'],
-			dest: './out/js/news',
+			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js'],
+			dest: './out/js/news/desktop',
 			name: 'main.js'
 		}
 	},
@@ -29,7 +29,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js','./src/js/weather/weather-table.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -66,8 +66,8 @@ var config = {
 		group: 'news',
 		type: 'css',
 		options: {
-			src: ['./src/less/news/_main.less'],
-			dest: './out/css/news',
+			src: ['./src/less/news/_main_desktop.less'],
+			dest: './out/css/news/desktop',
 			name: 'main.css'
 		}
 	},

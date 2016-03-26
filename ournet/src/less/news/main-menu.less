@@ -1,0 +1,33 @@
+#layout-menu {
+  height: 30px;
+  overflow: hidden;
+}
+
+#main-menu {
+  display: table;
+  padding-left: 0px;
+  margin: 0px auto;
+  list-style-type: none;
+  white-space: nowrap;
+  overflow: hidden;
+  li {
+    float: left;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    a {
+      line-height: 14px;
+      display: block;
+      padding: 8px 15px;
+      margin: 0px 1px;
+      color: @second-color;
+      font-weight: bold;
+      text-decoration: none;
+      .border-radius(2px);
+      &:hover, &.active {
+        //background-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+}
