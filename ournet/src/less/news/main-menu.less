@@ -4,9 +4,8 @@
 }
 
 #main-menu {
-  display: table;
-  padding-left: 0px;
-  margin: 0px auto;
+  padding: 0px;
+  margin: 0px;
   list-style-type: none;
   white-space: nowrap;
   overflow: hidden;
@@ -24,8 +23,11 @@
       font-weight: bold;
       text-decoration: none;
       .border-radius(2px);
-      &:hover, &.active {
-        //background-color: #fff;
+      &:hover {
+      	background-color: @dark-layout-color;
+      }
+      &.active {
+        background-color: @link-color;
         color: #fff;
       }
     }

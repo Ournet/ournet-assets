@@ -1,3 +1,9 @@
+.item-image {
+    >img {
+        background-color: @layout-color;
+    }
+}
+
 .list-footer .more {
 	display: inline-block;
 	padding: 4px 10px;
@@ -7,6 +13,11 @@
 	.border-radius(2px);
 	&:hover {
 		background-color: darken(@green-color, 3%);
+	}
+}
+.item{
+	.details{
+		color: #777;
 	}
 }
 /*      quotes      */
@@ -93,155 +104,6 @@
 
 .item h3 {
 	margin: 0px;
-}
-/*      stories     */
-
-.item.ot-story {
-	h3 {
-		font-size: 14px;
-		line-height: 18px;
-	}
-	.item-body {
-		padding-top: 4px;
-	}
-	p {
-		margin: 0px 0px 4px 0px;
-		line-height: 18px;
-	}
-	.details {
-		font-size: 90%;
-	}
-	&.view-item {
-		h1 {
-			font-family: Georgia, serif;
-			line-height: 26px;
-			margin: 0px;
-			font-weight: normal;
-			padding-bottom: 8px;
-			font-size: 24px;
-		}
-		p {
-			font-family: Georgia, serif;
-			font-size: 16px;
-			line-height: 22px;
-		}
-		.item-image {
-			.details {
-				margin-top: 4px;
-				margin-bottom: 4px;
-			}
-		}
-		.item-details {
-			margin-bottom: 6px;
-			color: #999;
-		}
-		.ot-topic.view-alist {
-			margin-bottom: 10px;
-			a {
-				display: inline-block;
-				padding: 1px 5px;
-				margin: 0px 1px 3px 0px;
-				color: #555;
-				background-color: #eee;
-				text-decoration: none;
-				.border-radius(3px);
-				&:hover {
-					background-color: #dedede;
-					.transition(background-color .3s);
-				}
-			}
-		}
-		.ot-topic.view-ailist {
-			margin-bottom: 10px;
-			a {
-				display: inline-block;
-				padding: 2px 5px 2px 28px;
-				margin: 0px 1px 3px 0px;
-				color: #555;
-				background-color: @layout-color;
-				text-decoration: none;
-				position: relative;
-				.border-radius(3px);
-				white-space: nowrap;
-				overflow: hidden;
-				&:hover {
-					background-color: darken(@layout-color, 6%);
-					.transition(background-color .3s);
-				}
-				img {
-					height: 100%;
-					.border-left-radius(3px);
-					position: absolute;
-					top: 0px;
-					left: 0px;
-					border-right: 1px solid #fff;
-				}
-			}
-		}
-	}
-}
-
-.list.view-main {
-	.item.ot-story {
-		h3 {
-			font-size: 16px;
-			margin-bottom: 5px;
-		}
-		.item-body {
-			padding-top: 6px;
-		}
-		p {
-			margin: 5px 0px;
-			font-size: 110%;
-		}
-	}
-}
-
-.ot-story.view-fine {
-	h3 {
-		font-size: 16px;
-		margin-bottom: 3px;
-		line-height: 18px;
-	}
-	p {
-		margin: 3px 0px;
-		font-size: 110%;
-	}
-}
-
-.fine-image {
-	position: relative;
-	display: block;
-	height: 0;
-	padding: 0;
-	padding-bottom: 56.25%;
-	overflow: hidden;
-	img {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		border: 0;
-		background-color: #eee;
-	}
-}
-
-.list.ot-story {
-	&.view-row {
-		.item {
-			height: 194px;
-			margin-bottom: 10px;
-			a {
-				text-decoration:none;
-			}
-			&:hover{
-				a{
-					color: @accent-color;
-				}
-			}
-		}
-	}
 }
 
 .list.ot-topic {
