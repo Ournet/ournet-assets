@@ -20,7 +20,7 @@ var config = {
 		group: 'news',
 		type: 'js',
 		options: {
-			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js'],
+			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js', '../node_modules/bootstrap/js/dropdown.js'],
 			dest: './out/js/news/desktop',
 			name: 'main.js'
 		}
