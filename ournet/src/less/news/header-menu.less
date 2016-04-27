@@ -1,13 +1,9 @@
-#layout-menu {
-    height: 30px
-}
-
-#main-menu {
+#header-menu {
     padding: 0px;
     margin: 10px 0px 0px 0px;
     list-style-type: none;
+    white-space: nowrap;
     > li {
-        float: left;
         display: inline-block;
         margin: 0px;
         padding: 0px;
@@ -19,7 +15,7 @@
             color: @second-color;
             font-weight: bold;
             text-decoration: none;
-            .border-radius(2px);
+            .border-radius(@border-radius);
             &:hover {
                 background-color: @dark-layout-color;
             }
