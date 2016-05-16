@@ -6,7 +6,7 @@
 
 .item.ot-story {
     h3 {
-        font-size: 14px;
+        font-size: 110%;
         line-height: 18px;
     }
     p {
@@ -15,6 +15,14 @@
     }
     .details {
         font-size: 90%;
+    }
+    &.is-important {
+        h3 a {
+            color: @important-color;
+        }
+    }
+    h3 a:visited {
+    	color: #777;
     }
 }
 
