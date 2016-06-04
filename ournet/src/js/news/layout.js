@@ -10,8 +10,16 @@
 		$('img.lazy').lazyload({ effect: 'fadeIn' });
 	}
 
+	function socialLikes() {
+		$('.social-likes').socialLikes();
+		$(d).on('popup_opened.social-likes', function(event, service) {
+			ga('send', 'social', service, 'share', location.href);
+		});
+	}
+
 	$(d).ready(function() {
 		searchEnable();
 		lazyEnable();
+		socialLikes();
 	});
 })(document, window);

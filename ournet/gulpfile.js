@@ -20,7 +20,7 @@ var config = {
 		group: 'news',
 		type: 'js',
 		options: {
-			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js', '../node_modules/bootstrap/js/dropdown.js'],
+			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js', '../node_modules/bootstrap/js/dropdown.js', '../node_modules/social-likes/src/social-likes.js'],
 			dest: './out/js/news/desktop',
 			name: 'main.js'
 		}
@@ -29,7 +29,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js', '../node_modules/cookies-js/dist/cookies.js', './src/js/weather/user.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -38,7 +38,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js', './src/js/weather/weather-table.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js', './src/js/weather/weather-table.js', '../node_modules/cookies-js/dist/cookies.js', './src/js/weather/user.js'],
 			dest: './out/js/weather/mobile',
 			name: 'main.js'
 		}
