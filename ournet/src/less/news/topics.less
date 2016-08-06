@@ -26,13 +26,14 @@
             display: inline-block;
             margin: 0px 5px 5px 0px;
             border-radius: @border-radius;
-            background-color: #eee;
+            background-color: @link-color;
             color: @second-color;
             padding: 1px 6px;
             text-decoration: none;
+            color: #fff;
+            font-weight: bold;
             &:hover {
-                background-color: @link-color;
-                color: #fff;
+                background-color: darken(@link-color, 10%);
             }
         }
     }

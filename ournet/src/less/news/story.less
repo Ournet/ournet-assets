@@ -1,6 +1,9 @@
 #story-page {
+    &.content-box {
+        border-top: 0px;
+    }
     .story-image {
-        margin-top: -13px;
+        margin-top: -10px;
         margin-left: -15px;
         margin-right: -15px;
         margin-bottom: 10px;
@@ -8,7 +11,7 @@
     }
     h1 {
         font-size: 32px;
-        margin: 0px;
+        margin: 0px 0px 10px 0px;
         a {
             color: @text-color;
         }
@@ -16,12 +19,15 @@
     .item-details {
         color: #777;
         font-size: 90%;
-        margin: 10px 0px;
+        margin: 5px 0px;
     }
     p {
         font-family: @headings-font-family;
         font-size: 120%;
         /*text-align: justify;*/
+    }
+    .item-body {
+        margin-top: 5px;
     }
 }
 
