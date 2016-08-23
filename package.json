@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "cookies-js": "^1.2.2",
-    "social-likes": "^3.1.0",
+    "social-likes": "^3.1.1",
     "weather-icons": "github:erikflowers/weather-icons"
   },
   "devDependencies": {
