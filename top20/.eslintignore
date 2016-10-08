@@ -1,2 +1,3 @@
 out/
-src/js/*
+src/js/jquery*
+src/js/top20*

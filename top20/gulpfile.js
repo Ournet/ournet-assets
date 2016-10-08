@@ -24,6 +24,14 @@ var config = {
 			name: 'website.js'
 		}
 	},
+	// 'js-soclog': {
+	// 	type: 'js',
+	// 	options: {
+	// 		src: ['./src/js/Popup.js', './src/js/soclog.js'],
+	// 		dest: './out/js',
+	// 		name: 'soclog.js'
+	// 	}
+	// },
 	// css
 	'css-main': {
 		type: 'css',

@@ -16,6 +16,24 @@ var del = require('del');
 
 var config = {
 	// js
+	'js-userlocation': {
+		// group: 'portal',
+		type: 'js',
+		options: {
+			src: ['./src/js/Cookie.js', './src/js/user-location.js'],
+			dest: './out/js',
+			name: 'user-location.js'
+		}
+	},
+	'js-portal-main': {
+		group: 'portal',
+		type: 'js',
+		options: {
+			src: ['./src/js/portal/layout.js', './src/js/jquery.lazyload.js'],
+			dest: './out/js/portal/desktop',
+			name: 'main.js'
+		}
+	},
 	'js-news-main': {
 		group: 'news',
 		type: 'js',
@@ -62,6 +80,15 @@ var config = {
 		}
 	},
 	// css
+	'css-portal-main': {
+		group: 'portal',
+		type: 'css',
+		options: {
+			src: ['./src/less/portal/_main_desktop.less'],
+			dest: './out/css/portal/desktop',
+			name: 'main.css'
+		}
+	},
 	'css-news-main': {
 		group: 'news',
 		type: 'css',

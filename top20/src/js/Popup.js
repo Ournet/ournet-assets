@@ -1,7 +1,7 @@
-﻿var Popup = {
-	popup: function(data) {
+var Popup = {
+	popup: function(data, cb) {
 		//{url,w;h};
-		if (typeof data == "undefined" || typeof data.url == "undefined") return;
+		if (typeof data === "undefined" || typeof data.url === "undefined") return;
 
 		data.w = data.w || 500;
 		data.h = data.h || 400;
@@ -12,5 +12,9 @@
 		if (window.focus) {
 			w.focus();
 		}
+		if (cb) {
+			w.onbeforeunload = cb;
+		}
+		return w;
 	}
 };

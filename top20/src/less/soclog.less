@@ -1,0 +1,49 @@
+.soclog {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.soclog-item {
+    display: block;
+    padding: 6px;
+    a {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 2px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        max-width: 200px;
+    }
+    i {
+        background-image: url('http://assets.ournetcdn.net/root/img/social/share-icons-6-on.png');
+        float: left;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
+    &.facebook {
+        a {
+            background-color: #3b5998;
+            &:hover {
+                background-color: darken(#3b5998, 5%);
+            }
+        }
+        i {
+            background-position: 0px 0px;
+        }
+    }
+    &.google {
+        a {
+            background-color: #4285f4;
+            &:hover {
+                background-color: darken(#4285f4, 5%);
+            }
+        }
+        i {
+            background-position: 0px -100px;
+        }
+    }
+}

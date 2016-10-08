@@ -1,0 +1,28 @@
+#header-menu {
+	padding: 0px;
+	margin: 10px 0px 0px 0px;
+	list-style-type: none;
+	white-space: nowrap;
+	> li {
+		display: inline-block;
+		margin: 0px;
+		padding: 0px;
+		> a {
+			line-height: 14px;
+			display: block;
+			padding: 8px 15px;
+			margin: 0px 1px;
+			color: @second-color;
+			font-weight: bold;
+			text-decoration: none;
+			.border-radius(@border-radius);
+			&:hover {
+				background-color: @dark-layout-color;
+			}
+			&.selected {
+				background-color: @link-color;
+				color: #fff;
+			}
+		}
+	}
+}
