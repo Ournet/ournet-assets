@@ -32,7 +32,7 @@
 	}
 
 	function getPlace(loc, cb) {
-		call('http://api.geonames.org/findNearbyPlaceNameJSON?lat=' + loc.lat + '&lng=' + loc.lng + '&username=Dumitru', function(data) {
+		call('http://api.geonames.org/findNearbyJSON?lat=' + loc.lat + '&lng=' + loc.lng + '&username=Dumitru&featureCode=PPL&featureCode=PPLC&featureCode=PPLA', function(data) {
 			data = data && data.geonames && data.geonames[0] || null;
 			cb(data);
 		});
