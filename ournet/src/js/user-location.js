@@ -8,10 +8,15 @@
 	}
 
 	function call(url, cb) {
-		$.getJSON(url).done(cb)
-			.fail(function(error) {
-				sendGAEvent('error', error && error.message || url);
-			});
+		$.ajax({
+			url: url,
+			dataType: 'json',
+			success: cb,
+			error: function(jqXHR, textStatus) {
+				var message = [textStatus || 'no-status', url].join(';');
+				sendGAEvent('error', message);
+			}
+		});
 	}
 
 	// function getIP(cb) {
