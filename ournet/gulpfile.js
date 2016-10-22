@@ -47,7 +47,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js', '../node_modules/cookies-js/dist/cookies.js', './src/js/weather/user.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -56,7 +56,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js', './src/js/weather/weather-table.js', '../node_modules/cookies-js/dist/cookies.js', './src/js/weather/user.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js', './src/js/weather/weather-table.js'],
 			dest: './out/js/weather/mobile',
 			name: 'main.js'
 		}
