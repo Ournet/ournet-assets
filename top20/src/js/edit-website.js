@@ -89,14 +89,14 @@
 		var template = '';
 		var category;
 		template += '<div class="row">';
-		template += '<div class="col-xs-4"><select class="form-control list-categories">';
+		template += '<div class="col-xs-4"><select name="category" class="form-control list-categories">';
 		for (var i = 0; i < Data.Categories.length; i++) {
 			category = Data.Categories[i];
 			template += '<option value="' + category.id + '">' + (category[Data.lang]) + '</option>';
 		}
 		template += '</select></div>';
 
-		template += '<div class="col-xs-5"><select class="form-control list-subcategories"></select></div>';
+		template += '<div class="col-xs-5"><select name="subcategory" class="form-control list-subcategories"></select></div>';
 		template += '<div class="col-xs-3"><a class="add-category" href="#">' + Data.add + '</a></div>';
 
 		template += '</div>';
