@@ -47,7 +47,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/weather/weather-table.js', '../node_modules/social-likes/src/social-likes.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/social-likes/src/social-likes.js', './src/js/weather/cocoshel-form.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -56,7 +56,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js', './src/js/weather/weather-table.js'],
+			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout_mobile.js'],
 			dest: './out/js/weather/mobile',
 			name: 'main.js'
 		}
@@ -76,6 +76,15 @@ var config = {
 		options: {
 			src: ['./src/js/exchange/app.js', './src/js/exchange/bootstrap/position.js', './src/js/exchange/our/services.js', './src/js/exchange/services.js', './src/js/exchange/our/directives.js', './src/js/exchange/controllers.js', './src/js/exchange/directives.js', './src/js/exchange/filters.js', './src/js/exchange/bootstrap/datepicker.js'],
 			dest: './out/js/exchange',
+			name: 'main.js'
+		}
+	},
+	'js-horoscope-main': {
+		group: 'horoscope',
+		type: 'js',
+		options: {
+			src: ['./src/js/horoscope/main.js', '../node_modules/social-likes/src/social-likes.js'],
+			dest: './out/js/horoscope',
 			name: 'main.js'
 		}
 	},
@@ -133,7 +142,16 @@ var config = {
 			dest: './out/css/weather',
 			name: 'page-widget.css'
 		}
-	}
+	},
+	'css-horoscope-main': {
+		group: 'horoscope',
+		type: 'css',
+		options: {
+			src: ['./src/less/horoscope/_main.less'],
+			dest: './out/css/horoscope',
+			name: 'main.css'
+		}
+	},
 };
 
 function configAction(item, options) {

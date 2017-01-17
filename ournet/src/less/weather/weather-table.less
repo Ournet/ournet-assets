@@ -18,12 +18,8 @@
     background-color: @link-color;
     display: table;
     width: 100%;
-    cursor: pointer;
     border: none;
     color: #fff;
-    &:hover {
-        background-color: darken(@link-color, 5%);
-    }
     &:after {
         clear: both;
         content: '';
@@ -163,34 +159,9 @@
     color: #fff;
 }
 
-.report-summary {
-    /*height: @report-summary-height;*/
-    display: block;
-    cursor: pointer;
-    margin: 5px 0px;
-    border-top: 1px solid darken(@layout-color, 5%);
-    border-bottom: 2px solid darken(@layout-color, 6%);
-    background-color: #fff;
-    &.closed {
-        display: none;
-    }
-    .date {
-        font-size: 80%;
-    }
-    &:hover {
-        .wt-date {
-            color: @link-color;
-        }
-    }
-}
-
 .report-details {
-    display: none;
     margin: 5px 0px;
     border-bottom: 1px solid darken(@layout-color, 5%);
-    &.opened {
-        display: block;
-    }
     .wt-row {
         background-color: #fff;
         .wt-col {
