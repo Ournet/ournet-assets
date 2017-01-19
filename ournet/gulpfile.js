@@ -47,7 +47,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['./src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/social-likes/src/social-likes.js', './src/js/weather/cocoshel-form.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/social-likes/src/social-likes.js', './src/js/weather/cocoshel-form.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -152,6 +152,15 @@ var config = {
 			name: 'main.css'
 		}
 	},
+	'css-horoscope-zodiac-signs': {
+		group: 'horoscope',
+		type: 'css',
+		options: {
+			src: ['./src/less/zodiac-signs.less'],
+			dest: './out/css',
+			name: 'zodiac-signs.css'
+		}
+	}
 };
 
 function configAction(item, options) {
