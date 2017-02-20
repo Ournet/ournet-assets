@@ -29,7 +29,7 @@ var config = {
 		group: 'portal',
 		type: 'js',
 		options: {
-			src: ['./src/js/portal/layout.js', './src/js/jquery.lazyload.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/portal/layout.js', './src/js/jquery.lazyload.js'],
 			dest: './out/js/portal/desktop',
 			name: 'main.js'
 		}
@@ -159,6 +159,24 @@ var config = {
 			src: ['./src/less/zodiac-signs.less'],
 			dest: './out/css',
 			name: 'zodiac-signs.css'
+		}
+	},
+	'css-horoscope-zodiac-icons-45': {
+		group: 'horoscope',
+		type: 'css',
+		options: {
+			src: ['./src/less/horoscope/red-zodiac-icons-45.less'],
+			dest: './out/css/horoscope',
+			name: 'red-zodiac-icons-45.css'
+		}
+	},
+	'css-horoscope-zodiac-icons-90': {
+		group: 'horoscope',
+		type: 'css',
+		options: {
+			src: ['./src/less/horoscope/red-zodiac-icons-90.less'],
+			dest: './out/css/horoscope',
+			name: 'red-zodiac-icons-90.css'
 		}
 	}
 };

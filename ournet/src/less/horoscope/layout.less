@@ -1,28 +1,48 @@
 #user-location {
-	padding-bottom: 10px;
-	font-size: 90%;
-	color: #999;
-	a {
-		color: #999;
-	}
+    padding-bottom: 10px;
+    font-size: 90%;
+    color: #999;
+    a {
+        color: #999;
+    }
 }
 
 @media (min-width: 768px) {
-	#page-content-right {
-		max-width: 330px;
-	}
+    #page-content-right {
+        max-width: 330px;
+    }
 }
 
 #top-ads {
-	max-height: 120px;
-	text-align: center;
-	background-color: darken(@layout-color, 5%);
-	border-bottom: 1px solid lighten(@layout-color, 4%);
-	.container {
-		padding: 6px;
-	}
+    max-height: 120px;
+    text-align: center;
+    background-color: darken(@layout-color, 5%);
+    border-bottom: 1px solid lighten(@layout-color, 4%);
+    .container {
+        padding: 6px;
+    }
 }
 
 #page-top {
-	border-bottom: 1px solid darken(@layout-color, 2%);
+    border-bottom: 1px solid darken(@layout-color, 2%);
+}
+
+.a-periods {
+    margin-bottom: 20px;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: @border-radius;
+        color: @second-color;
+        font-weight: bold;
+        margin: 0px 1px;
+        &:hover {
+            background-color: @dark-layout-color;
+        }
+        &.selected {
+            background-color: @link-color;
+            color: #fff;
+        }
+    }
 }
