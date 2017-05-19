@@ -47,3 +47,23 @@
             border: 1px solid #ddd;
     }
 }
+
+.box-tab {
+    display: inline-block;
+    cursor: pointer;
+    background: @dark-layout-color;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-top:3px solid @layout-color;
+    margin-right: 2px;
+    &.active {
+        background-color: #fff;
+        border-top-color: @accent-color;
+    }
+}
+
+fieldset.form{
+    border:none;
+    margin:0px;
+    padding:0px;
+}
