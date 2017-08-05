@@ -22,7 +22,8 @@
     mx: 'tiempo.ournet.mx',
     rs: 'vreme.ournet.rs',
     pl: 'pogoda.diez.pl',
-    al: 'www.moti2.al'
+    al: 'www.moti2.al',
+    tr: 'hava.one'
   };
 
   function push() {

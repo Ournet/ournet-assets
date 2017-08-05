@@ -70,6 +70,15 @@ var config = {
 			name: 'page-widget.js'
 		}
 	},
+	'js-weather-ins': {
+		group: 'weather',
+		type: 'js',
+		options: {
+			src: ['./src/js/weather/widget-ins.js'],
+			dest: './out/js/weather',
+			name: 'widget-ins.js'
+		}
+	},
 	'js-exchange-main': {
 		group: 'exchange',
 		type: 'js',
@@ -86,6 +95,15 @@ var config = {
 			src: ['./src/js/horoscope/main.js', '../node_modules/social-likes/src/social-likes.js'],
 			dest: './out/js/horoscope',
 			name: 'main.js'
+		}
+	},
+	'js-horoscope-tab-widget-v1': {
+		group: 'horoscope',
+		type: 'js',
+		options: {
+			src: ['./src/js/Cookie.js', './src/js/dom.js', './src/js/horoscope/cookie-sign-store.js', './src/js/horoscope/tab-widget-v1.js'],
+			dest: './out/js/horoscope',
+			name: 'tab-widget-v1.js'
 		}
 	},
 	// css
@@ -182,7 +200,7 @@ var config = {
 };
 
 function configAction(item, options) {
-	return function() {
+	return function () {
 		if (item.type === 'js') {
 			return js.out(options);
 		}
@@ -229,21 +247,21 @@ function createTasks() {
 
 createTasks();
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
 	return del(['out']);
 });
 
 // --------------- images -----------------
 
 // Copy all static images
-gulp.task('img', function() {
+gulp.task('img', function () {
 	return img.out({
 		src: './src/img/**/*',
 		dest: './out/img'
 	});
 });
 
-gulp.task('img-upload', function() {
+gulp.task('img-upload', function () {
 	return img.s3({
 		src: './out/img/**/*',
 		dest: 'img'
@@ -252,23 +270,32 @@ gulp.task('img-upload', function() {
 
 // --------------- js -----------------
 
-gulp.task('js-upload', function() {
+gulp.task('js-upload', function () {
 	return js.s3({
 		src: './out/js/**/*.min.js',
 		dest: 'js'
 	});
 });
 
+gulp.task('js-upload-ins', function () {
+	return js.s3({
+		src: './out/js/**/widget-ins.js',
+		dest: 'js',
+		// 7 days
+		cache: 60 * 60 * 24 * 7
+	});
+});
+
 // --------------- css -----------------
 
-gulp.task('css-upload', function() {
+gulp.task('css-upload', function () {
 	return css.s3({
 		src: './out/css/**/*.min.css',
 		dest: 'css'
 	});
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
 	connect.server({
 		root: 'out',
 		port: 8044
@@ -276,7 +303,7 @@ gulp.task('connect', function() {
 });
 
 // Rerun the task when a file changes
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch('./src/js/**/*', ['js']);
 	gulp.watch('./src/img/**/*', ['img']);
 	gulp.watch('./src/less/**/*', ['css']);
@@ -284,4 +311,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['css', 'js', 'img', 'connect', 'watch']);
 
-gulp.task('upload', ['js-upload', 'css-upload', 'img-upload']);
+gulp.task('upload', ['js-upload', 'js-upload-ins', 'css-upload', 'img-upload']);
