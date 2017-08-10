@@ -42,10 +42,13 @@
 		});
 		data.id = $('#widget-conf-placeid').val();
 		data.ul = data.ul || gd.ul;
+		data.scripttype = $('input[name=scripttype]:checked').val();
 		return data;
 	}
 
 	$('.form .conf-input').on('blur', generate);
+
+	$('input[name=scripttype]').on('change', generate);
 
 	function generate() {
 		var data = getData();

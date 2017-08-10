@@ -161,6 +161,15 @@ var config = {
 			name: 'page-widget.css'
 		}
 	},
+	'css-weather-error-page': {
+		group: 'weather',
+		type: 'css',
+		options: {
+			src: ['./src/less/weather/_error-page.less'],
+			dest: './out/css/weather',
+			name: 'error-page.css'
+		}
+	},
 	'css-horoscope-main': {
 		group: 'horoscope',
 		type: 'css',

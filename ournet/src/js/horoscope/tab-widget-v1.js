@@ -1,7 +1,7 @@
 
 (function ($w, $options) {
     /**
-     * data object: {signs:[{id:1,name:'Sign name',info:'Horoscope info'}], source:{link:'horoscop.ournet.ro', name: 'Ournet.ro'}}
+     * data object: {signs:[{id:1,name:'Sign name',summary:'Horoscope info'}], source:{link:'horoscop.ournet.ro', name: 'Ournet.ro'}}
      * options: {html:true,}
      */
     OURNET.horo.createTabWidgetsV1 = function (widgetData, options) {
@@ -16,25 +16,6 @@
         var dom = options.dom;
 
         options.sign = parseInt(options.dom.getAttr(el, 'data-sign') || options.store.get() || options.sign || 1);
-
-        if (options.html) {
-            var html = '<div class="' + $sc + 'inner' + '">';
-            html += '<div class="' + $sc + 'signs">';
-            for (var i = 0; i < signs.length; i++) {
-                var sign = signs[i];
-                html += '<i class="' + $sc + 'sign-' + sign.id + '" title="' + encodeURIComponent(sign.name) + '">' + i + '</i>';
-            }
-            // /signs
-            html += '</div>';
-            html += '<div class="' + $sc + 'summary"></div>';
-            // /inner
-            html += '</div>';
-            if (source) {
-                html += '<div class="' + $sc + 'footer' + '"><a href="' + source.link + '">' + decodeURIComponent(source.name || '') + '</a></div>';
-            }
-            el.innerHTML = html;
-        }
-
         var signElements = el.getElementsByTagName('i');
         if (!signElements) {
             console.log('no signs found');
@@ -103,4 +84,4 @@
         return target;
     }
 
-})(window, { wc: 'ONhoro-twv1', wsc: 'twv1-', store: OURNET.horo.CookieHoroscopeSignStore(), dom: OURNET.dom, sign: 1, html: true });
+})(window, { wc: 'tab-widget-v1', wsc: 'twv1-', store: OURNET.horo.CookieHoroscopeSignStore(), dom: OURNET.dom, sign: 1, html: true });
