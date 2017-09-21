@@ -1,4 +1,4 @@
-(function(d, w, appear) {
+(function (d, w, appear) {
 
 	function appearEnable() {
 		appear({
@@ -11,7 +11,7 @@
 			},
 			appear: function appear(el) {
 				// console.log('visible', el);
-				$('head').append('<link type="text/css" rel="stylesheet" href="http://assets.ournetcdn.net/ournet/css/zodiac-signs.min.css">');
+				$('head').append('<link type="text/css" rel="stylesheet" href="//assets.ournetcdn.net/ournet/css/zodiac-signs.min.css">');
 			},
 			disappear: function disappear(el) {
 				// console.log('no longer visible', el);
@@ -22,7 +22,7 @@
 	}
 
 	function searchEnable() {
-		$('#search-btn').click(function() {
+		$('#search-btn').click(function () {
 			$('#q-form').submit();
 		});
 	}
@@ -37,13 +37,13 @@
 	}
 
 	function socialLikes() {
-		$('.social-likes').socialLikes();
-		$(d).on('popup_opened.social-likes', function(event, service) {
-			ga('send', 'event', 'social', 'share', service);
-		});
+		// $('.social-likes').socialLikes();
+		// $('body').on('click', '.social-likes', function (event, service) {
+		// 	ga('send', 'event', 'social', 'share', service);
+		// });
 	}
 
-	$(d).ready(function() {
+	$(d).ready(function () {
 		searchEnable();
 		socialLikes();
 		appearEnable();
