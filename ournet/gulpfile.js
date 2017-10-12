@@ -29,7 +29,7 @@ var config = {
 		group: 'portal',
 		type: 'js',
 		options: {
-			src: ['../node_modules/appear/dist/appear.js', './src/js/portal/layout.js', './src/js/jquery.lazyload.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/portal/layout.js', './src/js/jquery.lazyload.js', './src/js/counters.js'],
 			dest: './out/js/portal/desktop',
 			name: 'main.js'
 		}
@@ -38,7 +38,7 @@ var config = {
 		group: 'news',
 		type: 'js',
 		options: {
-			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js', '../node_modules/bootstrap/js/dropdown.js', '../node_modules/social-likes-next/dist/social-likes.js'],
+			src: ['./src/js/news/layout.js', './src/js/jquery.lazyload.js', './src/js/counters.js', '../node_modules/bootstrap/js/dropdown.js', '../node_modules/social-likes-next/dist/social-likes.js'],
 			dest: './out/js/news/desktop',
 			name: 'main.js'
 		}
@@ -47,7 +47,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/counters.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -92,7 +92,7 @@ var config = {
 		group: 'horoscope',
 		type: 'js',
 		options: {
-			src: ['./src/js/horoscope/main.js', '../node_modules/social-likes/src/social-likes.js'],
+			src: ['./src/js/horoscope/main.js', './src/js/counters.js', '../node_modules/social-likes/src/social-likes.js'],
 			dest: './out/js/horoscope',
 			name: 'main.js'
 		}
