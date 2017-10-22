@@ -5,6 +5,11 @@
   obj.push = push;
   window.ournetweather = obj;
   var len = obj.length;
+  var schemas = {
+    ro: 'https',
+    ru: 'https'
+  };
+
   var hosts = {
     ro: 'meteo.ournet.ro',
     md: 'meteo.click.md',
@@ -55,7 +60,7 @@
     var host = hosts[data.cn];
     var type = data.type || 'widget2';
     if (host) {
-      return 'http://' + host + '/' + type + '/widget_frame';
+      return (schemas[data.cn]||'http')+'://' + host + '/' + type + '/widget_frame';
     }
   }
 

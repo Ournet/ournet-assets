@@ -43,6 +43,15 @@ var config = {
 			name: 'main.js'
 		}
 	},
+	'js-weather-widget-ins': {
+		group: 'weather',
+		type: 'js',
+		options: {
+			src: ['./src/js/weather/widget-ins.js'],
+			dest: './out/js/weather',
+			name: 'widget-ins.js'
+		}
+	},
 	'js-weather-main': {
 		group: 'weather',
 		type: 'js',
