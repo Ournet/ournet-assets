@@ -1,0 +1,295 @@
+@report-summary-height: 40px;
+@report-details-row-height: 40px;
+@report-wi-size: 40px;
+@dark-layout-color: darken(@layout-color, 20%);
+@head-color: darken(#fff, 7%);
+
+@date-width: 120px;
+@temp-width: 240px;
+@wind-width: 120px;
+
+.weather-report {
+    width: 100%;
+    overflow: hidden;
+    .w-icon {
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+}
+
+.daily-report {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid darken(@layout-color, 5%);
+    margin: 6px 0px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.dr-caption {
+    display: flex;
+    flex-direction: row;
+    background-color: @link-color;
+    color: #fff;
+    padding: 5px 5px 5px 10px;
+    
+}
+.dr-c-date{
+    font-size: 130%;
+}
+
+.dr-head {
+    display: flex;
+    flex-direction: row;
+    font-size: 90%;
+    color: #555;
+    background-color: @head-color;
+    border-bottom: 1px solid darken(@layout-color, 5%);
+}
+.dr-h {
+    flex-grow: 1;
+    padding: 3px 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dr-h-date{
+    width: @date-width;
+    padding-left: 10px;
+}
+.dr-h-temp{
+    width: @temp-width;
+}
+.dr-h-wind{
+    width: @wind-width;
+    text-align: right;
+}
+
+.dr-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.dr-row {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-bottom: 1px solid darken(@layout-color, 5%);
+    align-items: center;
+}
+.dr-r {
+    flex-grow: 1;
+    padding: 5px;
+}
+.dr-r-date{
+    width: @date-width;
+    padding-left: 10px;
+    font-size: 140%;
+}
+.dr-r-temp{
+    width: @temp-width;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    .temp-val {
+        font-size: 180%;
+        padding-right: 15px;
+        display: inline-block;
+    }
+}
+.dr-r-wind{
+    width: @wind-width;
+    text-align: right;
+}
+
+.wt-head {
+    font-size: 90%;
+    /*background-color: darken(@layout-color, 5%);*/
+    background-color: @link-color;
+    display: table;
+    width: 100%;
+    border: none;
+    color: #fff;
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+    .wt-date {
+        width: 35%;
+    }
+}
+
+.wt-body {
+    display: table;
+    width: 100%;
+}
+
+.wt-footer {
+    font-size: 90%;
+    padding: 4px 10px;
+    background-color: darken(@layout-color, 4%);
+    border-top: 1px solid darken(@layout-color, 6%);
+    > div {
+        position: relative;
+        padding-left: 12px;
+        &:before {
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: @accent-color;
+            content: " ";
+            display: table;
+        }
+    }
+}
+
+.wt-row {
+    display: table-row;
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.wt-col {
+    display: table-cell;
+    /*height: @report-summary-height + 10;*/
+    min-height: 2px;
+    padding: 5px;
+    vertical-align: middle;
+    .text-overflow();
+}
+
+.wt-date {
+    width: 25%;
+    font-size: 140%;
+    padding-left: 10px;
+    &.weekend {
+        .wday {
+            color: @accent-color;
+        }
+    }
+}
+
+.wt-temp {
+    /*width: 40%;*/
+}
+
+.temp,
+.temp-night {
+    font-size: 180%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.temp {
+    padding-right: 15px;
+}
+
+.temp-night {
+    color: @dark-layout-color;
+}
+
+.wt-precip {
+    /*width: 15%;*/
+    text-align: center;
+}
+
+.wt-wind {
+    width: 86px;
+    text-align: right;
+}
+
+.wt-pressure {
+    text-align: right;
+}
+
+.wind-speed {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0px 3px;
+    cursor: default;
+    /*background-color: @layout-color;*/
+}
+
+.wind-dir {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 140%;
+    color: @dark-layout-color;
+    vertical-align: middle;
+    line-height: 0;
+    margin-left: 6px;
+}
+
+.beaufort-5,
+.beaufort-6 {
+    background-color: #FFE44F;
+}
+
+.beaufort-7,
+.beaufort-8 {
+    background-color: #FF8E07;
+    font-weight: bold;
+    color: #fff;
+}
+
+.beaufort-9,
+.beaufort-10,
+.beaufort-11,
+.beaufort-12 {
+    background-color: #E44106;
+    font-weight: bold;
+    color: #fff;
+}
+
+.report-details {
+    margin: 5px 0px;
+    border-bottom: 1px solid darken(@layout-color, 5%);
+    .wt-row {
+        background-color: #fff;
+        .wt-col {
+            border-bottom: 1px solid darken(@layout-color, 5%);
+        }
+    }
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.wind-dir-SE {
+    .rotate(-135deg)
+}
+
+.wind-dir-S {
+    .rotate(-90deg)
+}
+
+.wind-dir-SW {
+    .rotate(-45deg)
+}
+
+.wind-dir-E {
+    .rotate(180deg)
+}
+
+.wind-dir-NW {
+    .rotate(45deg)
+}
+
+.wind-dir-N {
+    .rotate(90deg)
+}
+
+.wind-dir-NE {
+    .rotate(135deg)
+}
