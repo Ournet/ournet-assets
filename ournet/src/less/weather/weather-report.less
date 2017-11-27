@@ -2,26 +2,25 @@
 @report-details-row-height: 40px;
 @report-wi-size: 40px;
 @dark-layout-color: darken(@layout-color, 20%);
-@head-color: darken(#fff, 7%);
+// @head-color: darken(#fff, 7%);
+@head-color: darken(@layout-color, 4%);
+@border-color: darken(@layout-color, 8%);
 
 @date-width: 120px;
 @temp-width: 240px;
 @wind-width: 120px;
+@hum-width: 100px;
 
 .weather-report {
     width: 100%;
     overflow: hidden;
-    .w-icon {
-        vertical-align: middle;
-        margin-right: 15px;
-    }
 }
 
 .daily-report {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-bottom: 1px solid darken(@layout-color, 5%);
+    border-bottom: 1px solid @border-color;
     margin: 6px 0px;
     border-radius: 3px;
     overflow: hidden;
@@ -33,7 +32,9 @@
     background-color: @link-color;
     color: #fff;
     padding: 5px 5px 5px 10px;
-    
+    &.weekend{
+        background-color: @accent-color;
+    }
 }
 .dr-c-date{
     font-size: 130%;
@@ -45,11 +46,11 @@
     font-size: 90%;
     color: #555;
     background-color: @head-color;
-    border-bottom: 1px solid darken(@layout-color, 5%);
+    border-bottom: 1px solid @border-color;
 }
 .dr-h {
     flex-grow: 1;
-    padding: 3px 5px;
+    padding: 4px 5px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -61,8 +62,17 @@
 .dr-h-temp{
     width: @temp-width;
 }
+@media (max-width: 480px) {
+    .symbol-name {
+        display: none;
+    }
+}
 .dr-h-wind{
     width: @wind-width;
+    text-align: center;
+}
+.dr-h-hum{
+    width: @hum-width;
     text-align: right;
 }
 
@@ -75,8 +85,12 @@
     display: flex;
     flex-direction: row;
     background-color: #fff;
-    border-bottom: 1px solid darken(@layout-color, 5%);
+    border-bottom: 1px solid @border-color;
     align-items: center;
+    .w-icon {
+        vertical-align: middle;
+        margin-right: 15px;
+    }
 }
 .dr-r {
     flex-grow: 1;
@@ -86,6 +100,12 @@
     width: @date-width;
     padding-left: 10px;
     font-size: 140%;
+}
+.summary-report {
+    .dr-r-date{
+        width: @temp-width - 50;
+        font-size: 120%;
+    }
 }
 .dr-r-temp{
     width: @temp-width;
@@ -102,35 +122,17 @@
     width: @wind-width;
     text-align: right;
 }
-
-.wt-head {
-    font-size: 90%;
-    /*background-color: darken(@layout-color, 5%);*/
-    background-color: @link-color;
-    display: table;
-    width: 100%;
-    border: none;
-    color: #fff;
-    &:after {
-        clear: both;
-        content: '';
-        display: table;
-    }
-    .wt-date {
-        width: 35%;
-    }
+.dr-r-hum{
+    width: @hum-width;
+    text-align: right;
 }
 
-.wt-body {
-    display: table;
-    width: 100%;
-}
-
-.wt-footer {
+.dr-footer {
     font-size: 90%;
     padding: 4px 10px;
-    background-color: darken(@layout-color, 4%);
-    border-top: 1px solid darken(@layout-color, 6%);
+    // background-color: darken(@layout-color, 4%);
+    background-color: @head-color;
+    // border: 1px solid @border-color;
     > div {
         position: relative;
         padding-left: 12px;
@@ -147,68 +149,6 @@
             display: table;
         }
     }
-}
-
-.wt-row {
-    display: table-row;
-    &:after {
-        clear: both;
-        content: '';
-        display: table;
-    }
-}
-
-.wt-col {
-    display: table-cell;
-    /*height: @report-summary-height + 10;*/
-    min-height: 2px;
-    padding: 5px;
-    vertical-align: middle;
-    .text-overflow();
-}
-
-.wt-date {
-    width: 25%;
-    font-size: 140%;
-    padding-left: 10px;
-    &.weekend {
-        .wday {
-            color: @accent-color;
-        }
-    }
-}
-
-.wt-temp {
-    /*width: 40%;*/
-}
-
-.temp,
-.temp-night {
-    font-size: 180%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.temp {
-    padding-right: 15px;
-}
-
-.temp-night {
-    color: @dark-layout-color;
-}
-
-.wt-precip {
-    /*width: 15%;*/
-    text-align: center;
-}
-
-.wt-wind {
-    width: 86px;
-    text-align: right;
-}
-
-.wt-pressure {
-    text-align: right;
 }
 
 .wind-speed {
@@ -248,22 +188,6 @@
     background-color: #E44106;
     font-weight: bold;
     color: #fff;
-}
-
-.report-details {
-    margin: 5px 0px;
-    border-bottom: 1px solid darken(@layout-color, 5%);
-    .wt-row {
-        background-color: #fff;
-        .wt-col {
-            border-bottom: 1px solid darken(@layout-color, 5%);
-        }
-    }
-}
-
-.table {
-    display: table;
-    width: 100%;
 }
 
 .wind-dir-SE {

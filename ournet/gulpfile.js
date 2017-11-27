@@ -56,7 +56,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/counters.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/counters.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js', './src/js/weather/modernizr.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
@@ -308,7 +308,7 @@ gulp.task('img-upload', function () {
 
 gulp.task('js-upload', function () {
 	return js.s3({
-		src: './out/js/**/*.min.js',
+		src: './out/js/**/*.js',
 		dest: 'js'
 	});
 });
@@ -326,7 +326,7 @@ gulp.task('js-upload-ins', function () {
 
 gulp.task('css-upload', function () {
 	return css.s3({
-		src: './out/css/**/*.min.css',
+		src: './out/css/**/*.css',
 		dest: 'css'
 	});
 });
