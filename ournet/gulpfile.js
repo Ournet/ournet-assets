@@ -56,7 +56,7 @@ var config = {
 		group: 'weather',
 		type: 'js',
 		options: {
-			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/layout.js', './src/js/counters.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js', './src/js/weather/modernizr.js'],
+			src: ['../node_modules/appear/dist/appear.js', './src/js/weather/weather-dates.js', './src/js/weather/weather-lists.js', './src/js/weather/layout.js', './src/js/counters.js', '../node_modules/social-likes-next/dist/social-likes.js', './src/js/weather/cocoshel-form.js', './src/js/weather/modernizr.js'],
 			dest: './out/js/weather/desktop',
 			name: 'main.js'
 		}
