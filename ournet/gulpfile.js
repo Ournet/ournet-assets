@@ -147,17 +147,8 @@ var config = {
 		group: 'weather',
 		type: 'css',
 		options: {
-			src: ['./src/less/weather/_main_desktop.less'],
-			dest: './out/css/weather/desktop',
-			name: 'main.css'
-		}
-	},
-	'css-weather-main_mobile': {
-		group: 'weather',
-		type: 'css',
-		options: {
-			src: ['./src/less/weather/_main_mobile.less'],
-			dest: './out/css/weather/mobile',
+			src: ['./src/less/weather/_main.less'],
+			dest: './out/css/weather',
 			name: 'main.css'
 		}
 	},
@@ -177,24 +168,6 @@ var config = {
 			src: ['./src/less/weather/_error-page.less'],
 			dest: './out/css/weather',
 			name: 'error-page.css'
-		}
-	},
-	'css-weather-main-head': {
-		group: 'weather',
-		type: 'css',
-		options: {
-			src: ['./src/less/weather/_main_head.less'],
-			dest: './out/css/weather',
-			name: 'main-head.css'
-		}
-	},
-	'css-weather-main-body': {
-		group: 'weather',
-		type: 'css',
-		options: {
-			src: ['./src/less/weather/_main_body.less'],
-			dest: './out/css/weather',
-			name: 'main-body.css'
 		}
 	},
 	'css-horoscope-main': {
