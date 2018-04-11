@@ -1,6 +1,6 @@
 /*!     Ournet Group
     v0.1        */
-(function(widgetClassName) {
+(function (widgetClassName) {
   var obj = window.ournetweather || [];
   obj.push = push;
   window.ournetweather = obj;
@@ -60,7 +60,7 @@
     var host = hosts[data.cn];
     var type = data.type || 'widget2';
     if (host) {
-      return (schemas[data.cn]||'http')+'://' + host + '/' + type + '/widget_frame';
+      return (schemas[data.cn] || 'http') + '://' + host + '/' + type + '/widget_frame';
     }
   }
 
@@ -109,7 +109,7 @@
   function setAttr(element, name, value) {
     try {
       element.setAttribute(name, value);
-    } catch (e) {}
+    } catch (e) { }
   }
 
   function getElementsByClassname(className, tagName, node) {
@@ -140,17 +140,8 @@
     }
   }
 
-  function insertScript(url) {
-    var head = document.getElementsByTagName('head')[0];
-    var ins = document.createElement('script');
-    ins.async = 1;
-    ins.src = url;
-    head.appendChild(ins);
-  }
-
   try {
     createInitialWidgets();
-    // insertScript('//s3.eu-central-1.amazonaws.com/wrm/ins.js');
-  } catch (e) {}
+  } catch (e) { }
 
 })('ournetweather');

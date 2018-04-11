@@ -291,7 +291,7 @@ gulp.task('js-upload-ins', function () {
 		src: './out/js/**/widget-ins.js',
 		dest: 'js',
 		// 7 days
-		cache: 60 * 60 * 24 * 7
+		cache: Math.round(60 * 60 * 24 * 7)
 	});
 });
 
@@ -320,4 +320,4 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['css', 'js', 'img', 'connect', 'watch']);
 
-gulp.task('upload', ['js-upload', 'js-upload-ins', 'css-upload', 'img-upload']);
+gulp.task('upload', ['js-upload', 'css-upload', 'img-upload', 'js-upload-ins']);
