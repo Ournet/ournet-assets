@@ -6,5 +6,6 @@
 .env*
 out
 node_modules
-npm-debug.log
+*.log
 *.tgz
+dest

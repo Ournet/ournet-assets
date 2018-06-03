@@ -3,12 +3,24 @@
   "version": "2.0.0",
   "description": "Ournet assets project",
   "private": true,
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "root:build": "gulp --gulpfile ./src/root/gulpfile.js",
+    "top20:build": "gulp --gulpfile ./src/top20/gulpfile.js",
+    "ournet:build": "gulp --gulpfile ./src/ournet/gulpfile.js",
+    "ournet:prod": "set NODE_ENV=production&& gulp --gulpfile ./src/ournet/gulpfile.js",
+    "ournet:watch": "gulp --gulpfile ./src/ournet/gulpfile.js watch"
   },
   "dependencies": {},
   "devDependencies": {
+    "dotenv": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rev-all": "^0.9.7",
+    "gulp-sass": "^4.0.1",
+    "inuitcss": "^6.0.0"
   },
   "repository": {
     "type": "git",
