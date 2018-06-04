@@ -1,0 +1,10 @@
+
+.c-header {
+    height: $header-height;
+    .c-logo {
+        padding-top: ($header-height - $logo-height) / 2;
+    }
+    .c-search {
+        padding-top: ($header-height - $search-height) / 2;
+    }
+}

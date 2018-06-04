@@ -1,0 +1,35 @@
+
+$logo-height: 36px;
+
+.c-logo {
+    display: block;
+    overflow: hidden;
+}
+.c-logo__link {
+    display: inline-block;
+    height: $logo-height;
+    width: 140px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-image: url(//assets.ournetcdn.net/ournet/img/logos/ournet-logo.png);
+}
+body.country-md {
+    .c-logo__link {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/click-logo.png);
+    }
+}
+body.country-ru {
+    .c-logo__link {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/zborg-logo.png);
+    }
+}
+body.country-tr {
+    .c-logo__link {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/havaone-logo.png);
+    }
+}
+body.country-al {
+    .c-logo__link {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/moti2-logo.png);
+    }
+}

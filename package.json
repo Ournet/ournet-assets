@@ -9,6 +9,7 @@
     "top20:build": "gulp --gulpfile ./src/top20/gulpfile.js",
     "ournet:build": "gulp --gulpfile ./src/ournet/gulpfile.js",
     "ournet:prod": "set NODE_ENV=production&& gulp --gulpfile ./src/ournet/gulpfile.js",
+    "ournet:serv": "gulp --gulpfile ./src/ournet/gulpfile.js serv",
     "ournet:watch": "gulp --gulpfile ./src/ournet/gulpfile.js watch"
   },
   "dependencies": {},
@@ -16,6 +17,7 @@
     "dotenv": "^6.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.4",
+    "gulp-connect": "^5.5.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-rev-all": "^0.9.7",
