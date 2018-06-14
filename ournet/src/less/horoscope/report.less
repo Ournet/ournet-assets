@@ -13,16 +13,38 @@
     border-top-right-radius: @border-radius;
 }
 
+.report-dates {
+    margin-top: 8px;
+    font-size: 80%;
+    color: #999;
+    &:hover {
+        text-decoration: none;
+    }
+}
 .report-body {
-    background-color: #fff;
-    /*-webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);*/
-    padding: 10px;
     overflow: hidden;
     font-size: 110%;
-    border-bottom: 3px solid @report-border-color;
     border-right: 2px solid @report-border-color;
-    /*border-top: 1px solid darken(@layout-color, 5%);*/
+    border-bottom: 2px solid @report-border-color;
+}
+.report-text {
+    background-color: #fff;
+    padding: 10px;
+    overflow: hidden;
+}
+.report-footer {
+    background-color: @report-border-color;
+    padding: 4px 10px;
+}
+
+.report-no {
+    display: inline-block;
+    margin: 0px 6px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px 2px;
+    color: @red-color;
 }
 
 .report-head {
@@ -38,26 +60,22 @@
         margin: 0;
         font-weight: normal;
     }
-    .zodiacs {
-        height: 90px;
-        width: 90px;
-        margin: 0px auto;
-        display: inline-block;
-    }
     a {
         color: @second-color;
+        text-decoration: none;
+        &:hover {
+            h4,h3 {
+                color: @accent-color;
+            }
+        }
     }
-    /*:before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 5px 8px 5px 0;
-        border-color: transparent #fff transparent transparent;
-        position: absolute;
-        top: 20px;
-        right: 0px;
-    }*/
+}
+
+.report-icon {
+    height: 90px;
+    width: 90px;
+    margin: 0px auto;
+    display: inline-block;
 }
 
 @media (min-width: 768px) {
