@@ -115,6 +115,15 @@ var config = {
 			name: 'tab-widget-v1.js'
 		}
 	},
+	'js-horoscope-page-widget': {
+		group: 'horoscope',
+		type: 'js',
+		options: {
+			src: ['./src/js/horoscope/page-widget.js'],
+			dest: './out/js/horoscope',
+			name: 'page-widget.js'
+		}
+	},
 	// css
 	'css-portal-main': {
 		group: 'portal',
@@ -204,6 +213,15 @@ var config = {
 			src: ['./src/less/horoscope/red-zodiac-icons-90.less'],
 			dest: './out/css/horoscope',
 			name: 'red-zodiac-icons-90.css'
+		}
+	},
+	'css-horoscope-page-widget': {
+		group: 'horoscope',
+		type: 'css',
+		options: {
+			src: ['./src/less/horoscope/_page-widget.less'],
+			dest: './out/css/horoscope',
+			name: 'page-widget.css'
 		}
 	}
 };
