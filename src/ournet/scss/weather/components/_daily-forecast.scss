@@ -1,0 +1,39 @@
+
+.c-fc-daily {
+    margin-left: -10px;
+    list-style: none;
+}
+
+.c-fc-daily__item {
+    display: inline-block;
+    height: 120px;
+    min-width: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: $global-radius;
+    overflow: hidden;
+    background-color: #fff;
+    width: 50%;
+
+    @include mq($until: tablet) {
+        width: 33.33%;
+    }
+    @include mq($until: desktop) {
+        width: 20%;
+    }
+    @include mq($from: desktop) {
+        width: 12%;
+    }
+}
+
+.c-fc-daily__date {
+    display: block;
+    background-color: $dark-bg-color;
+    padding-left: $global-spacing-unit-small;
+    padding-right: $global-spacing-unit-small;
+}
+
+.c-fc-daily__body {
+    text-align: center;
+    padding: $global-spacing-unit-small;
+}

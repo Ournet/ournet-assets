@@ -1,0 +1,12 @@
+
+.u-hide-mobile {
+    @include mq($until: tablet) {
+        display: none !important;
+    }
+}
+
+.u-hide-tablet {
+    @include mq($until: desktop) {
+        display: none !important;
+    }
+}

@@ -26,3 +26,8 @@ $darker-bg-color: darken($bg-color, 10%);
 $text-color: #333;
 
 $header-height: 60px;
+$global-spacing-unit: $inuit-global-spacing-unit;
+$global-spacing-unit-tiny: $inuit-global-spacing-unit-tiny;
+$global-spacing-unit-small: $inuit-global-spacing-unit-small;
+
+// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
