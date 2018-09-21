@@ -1,59 +1,62 @@
-
 $logo-height: 36px;
-
 .c-logo {
-	display: block;
-	overflow: hidden;
-	white-space: nowrap;
-}
-.c-logo__img {
-	display: block;
-	height: $logo-height;
-	width: 110px;
-	background-position: 0 center;
-	background-repeat: no-repeat;
-	background-image: url(//assets.ournetcdn.net/ournet/img/logos/ournet-logo.png);
-	float: left;
-}
-@media screen and (max-width: 600px) {
-	.c-logo--proj {
-		.c-logo__img {
-			width: 36px;
-		}
-	}
-}
-body.country-md {
-	.c-logo__img {
-		background-image: url(//assets.ournetcdn.net/ournet/img/logos/click-logo.png);
-	}
-}
-body.country-ru {
-	.c-logo__img {
-		background-image: url(//assets.ournetcdn.net/ournet/img/logos/zborg-logo.png);
-	}
-}
-body.country-tr {
-	.c-logo__img {
-		background-image: url(//assets.ournetcdn.net/ournet/img/logos/havaone-logo.png);
-	}
-}
-body.country-al {
-	.c-logo__img {
-		background-image: url(//assets.ournetcdn.net/ournet/img/logos/moti2-logo.png);
-	}
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.c-logo__proj {
-	font-size: 160%;
-	line-height: 30px;
-	display: inline-block;
-	text-decoration: none;
-	color: $red;
-  text-transform: lowercase;
-  // font-weight: 400;
-	&:before {
-		content: "/";
-		color: $text-color;
-		padding-right: 2px;
-	}
+.c-logo__img {
+    display: block;
+    height: $logo-height;
+    width: 110px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-image: url(//assets.ournetcdn.net/ournet/img/logos/ournet-logo.png);
+    float: left;
+}
+
+@media screen and (max-width: 600px) {
+    .c-logo--proj {
+        .c-logo__img {
+            width: 36px;
+        }
+    }
+}
+
+body.country-md {
+    .c-logo__img {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/click-logo.png);
+    }
+}
+
+body.country-ru {
+    .c-logo__img {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/zborg-logo.png);
+    }
+}
+
+body.country-tr {
+    .c-logo__img {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/havaone-logo.png);
+    }
+}
+
+body.country-al {
+    .c-logo__img {
+        background-image: url(//assets.ournetcdn.net/ournet/img/logos/moti2-logo.png);
+    }
+}
+
+a.c-logo__proj {
+    font-size: 160%;
+    line-height: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: $red;
+	text-transform: lowercase; // font-weight: 400;
+    &:before {
+        content: "/";
+        color: $text-color;
+        padding-right: 2px;
+    }
 }

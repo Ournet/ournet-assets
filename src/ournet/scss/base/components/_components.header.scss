@@ -2,9 +2,12 @@
 .c-header {
     height: $header-height;
     .c-logo {
-        padding-top: ($header-height - $logo-height) / 2;
+        margin-top: ($header-height - $logo-height) / 2;
     }
     .c-search {
-        padding-top: ($header-height - $search-height) / 2;
+        margin-top: ($header-height - $search-height) / 2;
+    }
+    .c-cap {
+        margin-top: ($header-height - $search-height) / 2;
     }
 }

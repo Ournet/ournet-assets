@@ -19,7 +19,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #007bff !default;
+$blue:    #2199e8 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -43,9 +43,10 @@ $bg-color: #f2f0ea;
 $dark-bg-color: darken($bg-color, 5%);
 $darker-bg-color: darken($bg-color, 10%);
 $text-color: #333;
-$accent-color: #cb6048;
-$mute-color: $gray-400;
+$accent-color: $red;
+$mute-color: #ccc;
 
+$link-color: $primary;
 
 // Standardise some UI treatments.
 
