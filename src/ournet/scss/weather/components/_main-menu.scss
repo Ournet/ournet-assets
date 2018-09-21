@@ -1,0 +1,12 @@
+
+.c-main-menu {
+    a {
+        margin: $global-spacing-unit-tiny 0;
+        display: block;
+        font-weight: bold;
+
+        &.active,&:hover {
+            color: $accent-color;
+        }
+    }
+}

@@ -10,3 +10,13 @@
         display: none !important;
     }
 }
+
+.u-mobile-only {
+    @include mq($from: tablet) {
+        display: none !important;
+    }
+}
+
+.u-tr {
+    text-align: right;
+}

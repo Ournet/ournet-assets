@@ -142,8 +142,10 @@
 // @import "components/example.components.buttons";
 @import "../base/components/components.logo";
 @import "../base/components/components.search";
+@import "../base/components/components.mobile-menu";
 @import "../base/components/components.header";
 
+@import "./components/main-menu";
 @import "./components/daily-forecast";
 
 

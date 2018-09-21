@@ -5,6 +5,46 @@
 // The global settings file contains any project-wide variables; things that
 // need to be made available to the entire codebase.
 
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #ca0000 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$bg-color: #f2f0ea;
+$dark-bg-color: darken($bg-color, 5%);
+$darker-bg-color: darken($bg-color, 10%);
+$text-color: #333;
+$accent-color: #cb6048;
+$mute-color: $gray-400;
 
 
 // Standardise some UI treatments.
@@ -20,14 +60,20 @@ $global-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helveti
 $inuit-offsets: false;
 // $inuit-wrapper-width: 1200px;
 
-$bg-color: #f2f0ea;
-$dark-bg-color: darken($bg-color, 5%);
-$darker-bg-color: darken($bg-color, 10%);
-$text-color: #333;
-
 $header-height: 60px;
 $global-spacing-unit: $inuit-global-spacing-unit;
 $global-spacing-unit-tiny: $inuit-global-spacing-unit-tiny;
 $global-spacing-unit-small: $inuit-global-spacing-unit-small;
 
 // $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+// Which fractions would you like in your grid system(s)? By default, inuitcss
+// provides you fractions of one whole, halves, thirds, quarters and fifths,
+// e.g.:
+//
+//   .u-1/2
+//   .u-2/5
+//   .u-3/4
+//   .u-2/3
+
+$inuit-fractions: 1 2 3 4 5 6 !default;
