@@ -1,0 +1,26 @@
+.c-exp {
+    a {
+        color: $text-color;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.c-exp__title {
+    margin-bottom: $global-spacing-unit-small;
+    font-weight: normal;
+}
+
+.c-exp-list {
+    margin-bottom: $global-spacing-unit;
+    list-style: none;
+    margin-left: 0px;
+    li {
+        padding: 2px 0px;
+    }
+    a {
+        font-weight: bold;
+        font-weight: 600;
+    }
+}

@@ -1,6 +1,5 @@
 .c-cap {
     text-align: right;
-    font-weight: bold;
     font-size: 1.1rem;
     .c-fc-temp {
         font-size: 1.5rem;
@@ -14,6 +13,8 @@
 .c-cap__name {
     display: inline-block;
     white-space: nowrap;
+    font-weight: bold;
+    font-weight: 600;
     a {
         display: inline-block;
         margin-right: 5px;

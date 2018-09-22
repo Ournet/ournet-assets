@@ -132,6 +132,7 @@
 @import "../../../../node_modules/inuitcss/objects/objects.table";
 @import "../../../../node_modules/inuitcss/objects/objects.pack";
 
+@import "../base/objects/objects.wrapper";
 
 
 
@@ -146,10 +147,11 @@
 @import "../base/components/components.header";
 @import "../base/components/components.capital-forecast";
 
-@import "./components/main-menu";
+@import "./components/components.breadcrumb";
+@import "./components/components.page-title";
+@import "./components/components.weather-icons";
+@import "./components/components.explore-menu";
 @import "./components/daily-forecast";
-
-
 
 
 // UTILITIES

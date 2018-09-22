@@ -1,0 +1,121 @@
+.w-icon {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background: url('//assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-wb.png') 0 0 no-repeat;
+	&.night {
+		background: url('//assets.ournetcdn.net/root/img/icons/weather/40-weather-icons-night-wb.png') 0 0 no-repeat;
+	}
+	/* LightCloud */
+	&.wi-2 {
+		background-position: -40px 0;
+	}
+	/* PartlyCloud */
+	&.wi-3 {
+		background-position: -80px 0;
+	}
+	/* Cloud */
+	&.wi-4 {
+		background-position: -120px 0;
+	}
+	/* LightRainSun,
+	LightRain,
+	LightRainThunder */
+	&.wi-5,
+	&.wi-9,
+	&.wi-22 {
+		background-position: -160px 0;
+	}
+	/* LightRainThunderSun */
+	&.wi-6 {
+		background-position: -200px 0;
+	}
+	/* SleetSun,
+	SleetSunThunder,
+	SleetThunder,
+	DrizzleThunderSun,
+	LightSleetThunderSun,
+	DrizzleThunder,
+	LightSleetThunder,
+	DrizzleSun,
+	LightSleetSun,
+	Drizzle,
+	LightSleet */
+	&.wi-7,
+	&.wi-20,
+	&.wi-24,
+	&.wi-23,
+	&.wi-26,
+	&.wi-30,
+	&.wi-31,
+	&.wi-40,
+	&.wi-42,
+	&.wi-46,
+	&.wi-47 {
+		background-position: -240px 0;
+	}
+	/* SnowSun,
+	SnowSunThunder,
+	LightSnowThunderSun,
+	LightSnowThunder,
+	LightSnowSun,
+	LightSnow */
+	&.wi-8,
+	&.wi-21,
+	&.wi-28,
+	&.wi-33,
+	&.wi-44,
+	&.wi-49 {
+		background-position: -280px 0;
+	}
+	/* LightRain,
+	LightRainThunder */
+	/*&.wi-9,
+	&.wi-22 {
+		background-position: -320px 0;
+	}*/
+	/* Rain,
+	RainThunderSun,
+	RainSun */
+	&.wi-10,
+	&.wi-25,
+	&.wi-41 {
+		background-position: -360px 0;
+	}
+	/* RainThunder */
+	&.wi-11 {
+		background-position: -400px 0;
+	}
+	/* Sleet,
+	HeavySleetSun,
+	HeavySleetThunderSun,
+	HeavySleetThunder,
+	HeavySleet */
+	&.wi-12,
+	&.wi-27,
+	&.wi-32,
+	&.wi-43,
+	&.wi-48 {
+		background-position: -440px 0;
+	}
+	/* Snow,
+	HeavySnowThunderSun,
+	HeavySnowSun,
+	HeavySnow */
+	&.wi-13,
+	&.wi-29,
+	&.wi-45,
+	&.wi-50 {
+		background-position: -480px 0;
+	}
+	/* SnowThunder,
+	HeavySnowThunder */
+	&.wi-14,
+	&.wi-34 {
+		background-position: -520px 0;
+	}
+	/* Fog */
+	&.wi-15 {
+		background-position: -560px 0;
+	}
+}

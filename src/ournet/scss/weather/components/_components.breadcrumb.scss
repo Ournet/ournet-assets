@@ -1,0 +1,15 @@
+.c-breadcrumb {
+    display: block;
+    font-size: 0.8rem;
+    color: $gray;
+    margin-bottom: $global-spacing-unit-small;
+
+    a {
+        display: inline-block;
+        margin: 0px $global-spacing-unit-tiny/2;
+        color: $gray;
+    }
+    a:first-child {
+        margin-left: 0px;
+    }
+}

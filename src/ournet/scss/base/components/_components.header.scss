@@ -1,13 +1,17 @@
 
+$header-height: 60px;
+
 .c-header {
-    height: $header-height;
+    padding: 16px 0px;
+    margin-bottom: 16px;
+
     .c-logo {
-        margin-top: ($header-height - $logo-height) / 2;
+        margin-top: $header-height / 4 - 3;
     }
-    .c-search {
-        margin-top: ($header-height - $search-height) / 2;
+    .c-header__item {
+        margin-top: $header-height / 4;
     }
     .c-cap {
-        margin-top: ($header-height - $search-height) / 2;
+        margin-top: $header-height / 4 - 4;
     }
 }

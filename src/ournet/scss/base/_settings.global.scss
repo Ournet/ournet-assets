@@ -45,6 +45,7 @@ $darker-bg-color: darken($bg-color, 10%);
 $text-color: #333;
 $accent-color: $red;
 $mute-color: #ccc;
+$gray: #999;
 
 $link-color: $primary;
 
@@ -61,7 +62,6 @@ $global-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helveti
 $inuit-offsets: false;
 // $inuit-wrapper-width: 1200px;
 
-$header-height: 60px;
 $global-spacing-unit: $inuit-global-spacing-unit;
 $global-spacing-unit-tiny: $inuit-global-spacing-unit-tiny;
 $global-spacing-unit-small: $inuit-global-spacing-unit-small;

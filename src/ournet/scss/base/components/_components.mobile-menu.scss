@@ -1,13 +1,9 @@
-.c-mobm {
-    // position: relative;
-}
 
 .c-mobm__btn {
-    position: fixed;
     width: 32px;
     height: 26px;
-    right: 32px;
-    top: 32px;
+    display: inline-block;
+    position: relative;
 }
 
 .c-mobm__btn-i {
