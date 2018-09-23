@@ -1,0 +1,36 @@
+.c-group {
+    margin: $global-spacing-unit 0px;
+}
+
+.c-group-h {
+    margin-bottom: $global-spacing-unit;
+    text-align: center;
+    position: relative;
+    &:before {
+        top: 49%;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: darken($bg-color, 12%);
+    }
+    h3 {
+        margin: 0;
+        padding: 0 $global-spacing-unit;
+        background-color: $bg-color;
+        display: inline-block;
+        position: relative;
+        font-weight: normal;
+        a {
+            color: $secondary;
+        }
+    }
+}
+.c-group-h--important h3 a {
+    color: $red;
+}
+.c-group-h--new h3 a {
+    color: $green;
+}
