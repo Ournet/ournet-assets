@@ -1,0 +1,11 @@
+
+.c-places-list {
+    margin-bottom: $global-spacing-unit;
+}
+
+.c-places-list__i {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
