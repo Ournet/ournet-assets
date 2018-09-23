@@ -3,7 +3,7 @@
 }
 
 .c-group-h {
-    margin-bottom: $global-spacing-unit;
+    margin-bottom: $global-spacing-unit-small;
     text-align: center;
     position: relative;
     &:before {
@@ -18,7 +18,7 @@
     }
     h3 {
         margin: 0;
-        padding: 0 $global-spacing-unit;
+        padding: 0 $global-spacing-unit-small;
         background-color: $bg-color;
         display: inline-block;
         position: relative;
