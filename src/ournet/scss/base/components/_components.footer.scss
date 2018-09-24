@@ -1,0 +1,12 @@
+.c-footer {
+    color: $gray;
+    margin: $global-spacing-unit 0;
+    font-size: $global-font-size - 2;
+    h4 {
+        margin-bottom: $global-spacing-unit-small;
+        font-weight: normal;
+    }
+    .o-layout__item {
+        font-size: $global-font-size - 2;
+    }
+}
