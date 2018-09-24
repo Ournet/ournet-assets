@@ -9,4 +9,19 @@
     .o-layout__item {
         font-size: $global-font-size - 2;
     }
+    a {
+        color: $text-color;
+        font-weight: 500;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+.o-int-sites {
+    div {
+        display: inline-block;
+        width: 50%;
+        padding: 2px 6px 2px 0px;
+        max-width: 250px;
+    }
 }
