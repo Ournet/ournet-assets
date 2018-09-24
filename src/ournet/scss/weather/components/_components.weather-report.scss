@@ -68,6 +68,12 @@ $hum-width: 15%;
     width: $temp-width;
 }
 @media (max-width: 480px) {
+    .dr-r-temp,.dr-h-temp {
+        width: $temp-width - 5 !important;
+    }
+    .dr-r-wind,.dr-h-wind {
+        width: $wind-width + 5 !important;
+    }
     .symbol-name {
         display: none;
     }
