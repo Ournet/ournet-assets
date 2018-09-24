@@ -1,0 +1,12 @@
+
+.c-nodata {
+    display: block;
+    text-align: center;
+    padding: $global-spacing-unit;
+    font-weight: 500;
+    margin-bottom: $global-spacing-unit;
+    background-color: white;
+    // border-radius: $global-radius;
+    border-right: 1px solid darken($bg-color, 5%);
+    border-bottom: 2px solid darken($bg-color, 5%);
+}

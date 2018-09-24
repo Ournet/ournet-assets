@@ -11,9 +11,12 @@ $temp-width: 45%;
 $wind-width: 20%;
 $hum-width: 15%;
 
-.weather-report {
+.c-daily-report {
     width: 100%;
     overflow: hidden;
+    .c-ad {
+        margin-bottom: 6px;
+    }
 }
 
 .day-report {
@@ -133,7 +136,7 @@ $hum-width: 15%;
 }
 
 .dr-footer {
-    font-size: 90%;
+    font-size: 0.8rem;
     padding: 4px 10px;
     // background-color: darken(@layout-color, 4%);
     background-color: $head-color;
