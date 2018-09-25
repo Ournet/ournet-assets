@@ -1,0 +1,34 @@
+.c-forbro {
+    margin-bottom: $global-spacing-unit;
+}
+
+.c-forbro__tabs {
+    margin: 0px;
+    list-style: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    li {
+        display: inline-block;
+        margin: 0px 2px 0px 0px;
+        padding: 2px $global-spacing-unit-small 5px;
+        background-color: darken($bg-color, 5%);
+        cursor: pointer;
+        border-top: 3px solid darken($bg-color, 5%);
+        &:hover {
+            border-top-color: $link-color;
+        }
+    }
+}
+li.c-forbro__tabs--selected {
+    border-top-color: $link-color;
+    background-color: white;
+}
+
+.c-forbro__content {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    padding: $global-spacing-unit-small;
+    overflow: hidden;
+    min-height: 500px;
+}
