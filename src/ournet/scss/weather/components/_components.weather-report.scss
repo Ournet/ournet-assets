@@ -114,12 +114,7 @@ $hum-width: 15%;
     padding-left: 10px;
     font-size: 1.3rem;
 }
-.summary-report {
-    .dr-r-date{
-        width: $date-width + $hum-width;
-        font-size: 120%;
-    }
-}
+
 .dr-r-temp{
     width: $temp-width;
     overflow: hidden;
@@ -230,4 +225,11 @@ $hum-width: 15%;
 
 .wind-dir-NE {
     transform: rotate(135deg)
+}
+
+.c-places-daily-forecast {
+    .dr-r-date{
+        width: $date-width + $hum-width;
+        font-size: 120%;
+    }
 }

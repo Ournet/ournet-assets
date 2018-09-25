@@ -12,7 +12,15 @@
     "ournet:serv": "gulp --gulpfile ./src/ournet/gulpfile.js serv",
     "ournet:watch": "gulp --gulpfile ./src/ournet/gulpfile.js watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "browserify": "^16.2.2",
+    "cash-dom": "^2.3.5",
+    "gulp-buffer": "^0.0.2",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulplog": "^1.0.0",
+    "xhr": "^2.5.0"
+  },
   "devDependencies": {
     "dotenv": "^6.0.0",
     "gulp": "^3.9.1",
@@ -39,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/Ournet/ournet-assets/issues"
   },
-  "homepage": "https://github.com/Ournet/ournet-assets#readme"
+  "homepage": "https://github.com/Ournet/ournet-assets#readme",
+  "browser": {
+    "request": "xhr"
+  }
 }
