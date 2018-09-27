@@ -35,6 +35,7 @@ const cssDist = '../../dest/ournet/css';
 gulp.task('sass', function () {
     return gulp.src([
         './scss/weather/main.scss',
+        './scss/weather/page-widget.scss',
     ], { base: './scss' })
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(cssDist))
@@ -57,7 +58,10 @@ gulp.task('sass:watch', function () {
 const jsDist = '../../dest/ournet/js';
 
 gulp.task('js', function () {
-    return gulp.src(['./js/weather/main.js'], { read: false, base: './js' }) // no need of reading file because browserify does.
+    return gulp.src([
+        './js/weather/main.js',
+        './js/weather/page-widget.js',
+    ], { read: false, base: './js' }) // no need of reading file because browserify does.
         // transform file objects using gulp-tap plugin
         .pipe(tap(function (file) {
 

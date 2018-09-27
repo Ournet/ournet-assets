@@ -1,0 +1,59 @@
+// SETTINGS
+@import "../base/settings.config";
+@import "settings/settings.config";
+@import "../../../../node_modules/inuitcss/settings/settings.core";
+@import "../base/settings.global";
+@import "settings/settings.global";
+.c-wconfig__tabs {
+    margin: 0px;
+    list-style: none;
+    >li {
+        display: inline-block;
+        padding: 4px 12px;
+        background-color: darken($bg-color, 10%);
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+
+li.c-wconfig__tabs--selected {
+    background-color: white;
+    border-top: 3px solid $accent-color;
+}
+
+.c-wconfig__content {
+    margin: 0px;
+    list-style: none;
+    padding: 12px;
+    background-color: white;
+    th {
+        font-weight: 500;
+    }
+}
+
+.c-wconfig__input,
+.c-wconfig__place,
+#widget-script {
+    border-radius: $global-radius;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+}
+
+#widget-preview {
+    text-align: center;
+    h2,
+    h3,
+    h4 {
+        font-weight: normal;
+    }
+}
+
+#widget-iframe {
+    min-height: 260px;
+}
+
+#widget-script {
+    width: 90%;
+    height: 120px;
+    font-size: 80%;
+}
