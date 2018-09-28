@@ -4,15 +4,21 @@
 @import "../../../../node_modules/inuitcss/settings/settings.core";
 @import "../base/settings.global";
 @import "settings/settings.global";
+
+
+@import "../base/components/components.buttons";
+@import "../base/components/components.autocomplete";
+
 .c-wconfig__tabs {
     margin: 0px;
     list-style: none;
     >li {
         display: inline-block;
-        padding: 4px 12px;
+        padding: 6px 12px;
         background-color: darken($bg-color, 10%);
         cursor: pointer;
         font-weight: 500;
+        margin-right: 2px;
     }
 }
 
@@ -26,6 +32,8 @@ li.c-wconfig__tabs--selected {
     list-style: none;
     padding: 12px;
     background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    overflow: hidden;
     th {
         font-weight: 500;
     }
@@ -55,5 +63,10 @@ li.c-wconfig__tabs--selected {
 #widget-script {
     width: 90%;
     height: 120px;
-    font-size: 80%;
+    font-size: $global-font-size - 2;
+}
+
+.c-wconfig__place {
+    font-weight: 500;
+    background-color: lighten($primary, 40%);
 }

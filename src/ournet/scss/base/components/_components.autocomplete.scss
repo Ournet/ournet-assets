@@ -1,0 +1,30 @@
+.c-autocomplete {
+    background: white;
+    z-index: 1000;
+    font: 14px/22px "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 1px solid rgba(50, 50, 50, 0.6);
+}
+
+.c-autocomplete * {
+    font: inherit;
+}
+
+.c-autocomplete > div {
+    padding: 0 4px;
+    div:first-child {
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+.c-autocomplete > div:hover,
+.c-autocomplete > div.selected {
+    background: $primary;
+    cursor: pointer;
+    color: white;
+    div {
+        color: white;
+    }
+}

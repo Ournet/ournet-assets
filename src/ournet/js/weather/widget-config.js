@@ -1,29 +1,67 @@
 
-var autocomplete = require('autocompleter');
+
+var autocomplete = require('autocompleter').default;
 var CONSTANTS = require('../base/constants').CONSTANTS;
 var $ = require('cash-dom');
 var xhr = require("xhr");
 
+
+var widget;
+var previewSelector;
+var scriptSelector;
+
 $(function () {
+    widget = $('#widget-configs');
+    if (!widget.length) {
+        return;
+    }
+    previewSelector = $('.c-wconfig', widget).data('preview');
+    scriptSelector = $('.c-wconfig', widget).data('script');
+
     generateScript();
     $('.c-wconfig__input').on('blur', generateScript);
     $('.c-wconfig__btn').on('click', generateScript);
-    $('#widget-configs').each(function (index, rootEl) {
-        var root = $(rootEl);
-        var previewSelector = root.data('preview');
-        var scriptSelector = root.data('script');
-        var tabs = $('.c-wconfig__tabs li', rootEl);
-        var contents = $('.c-wconfig__content li', rootEl);
 
-        tabs.on('click', function () {
-            var tab = $(this);
-            $('#widget-config-type').val(tab.data('type'));
-            var index = tab.index();
-            tabs.each(function () { $(this).removeClass('c-wconfig__tabs--selected') });
-            tab.addClass('c-wconfig__tabs--selected');
-            contents.each(function () { $(this).addClass('u-hidden') });
-            contents.eq(index).removeClass('u-hidden');
-        });
+    var tabs = $('.c-wconfig__tabs li', widget);
+    var contents = $('.c-wconfig__content li', widget);
+
+    tabs.on('click', function () {
+        var tab = $(this);
+        $('#widget-config-type').val(tab.data('type'));
+        var index = tab.index();
+        tabs.each(function () { $(this).removeClass('c-wconfig__tabs--selected') });
+        tab.addClass('c-wconfig__tabs--selected');
+        contents.each(function () { $(this).addClass('u-hidden') });
+        contents.eq(index).removeClass('u-hidden');
+        generateScript();
+    });
+
+    $('.c-wconfig__place').each(function () {
+        var input = $(this);
+        autocomplete({
+            className: 'c-autocomplete',
+            input: input[0],
+            minLength: 2,
+            fetch: searchPlaces,
+            render: function (item, currentValue) {
+                var doc = document;
+                var div = doc.createElement("div");
+                var divName = doc.createElement("div");
+                divName.textContent = item.name;
+                div.appendChild(divName);
+                if (item.admin) {
+                    var divAdminName = doc.createElement("div");
+                    divAdminName.textContent = item.admin;
+                    div.appendChild(divAdminName);
+                }
+                return div;
+            },
+            onSelect: function (item) {
+                $('.c-wconfig__placeid', input.parent()).val(item.id);
+                input.val(item.name);
+                generateScript();
+            },
+        })
     });
 });
 
@@ -51,14 +89,14 @@ function generateScript() {
             return;
         }
 
-        $('#widget-iframe').html(body);
-        $('#widget-script').val(body);
+        $(previewSelector).html(body);
+        $(scriptSelector).val(body);
     });
 }
 
 function getConfigData() {
     var data = {};
-    $('.c-wconfig__content li', $('#widget-configs')).each(function () {
+    $('.c-wconfig__content li', widget).each(function () {
         var content = $(this);
         if (content.hasClass('u-hidden')) return;
         $('.c-wconfig__input', content).each(function () {
@@ -82,6 +120,7 @@ function searchPlaces(q, cb) {
     xhr({
         url: url,
         timeout: 1000 * 3,
+        json: true,
     }, function (error, res, body) {
         if (error) {
             console.error(error);
