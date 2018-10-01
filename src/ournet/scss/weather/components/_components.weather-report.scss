@@ -80,7 +80,7 @@ $hum-width: 15%;
 }
 .dr-h-wind{
     width: $wind-width;
-    text-align: center;
+    text-align: right;
 }
 .dr-h-hum{
     width: $hum-width;
@@ -170,12 +170,10 @@ $hum-width: 15%;
 
 .wind-dir {
     display: inline-block;
-    font-weight: bold;
-    font-size: 140%;
-    color: $dark-layout-color;
-    vertical-align: middle;
-    line-height: 0;
-    margin-left: 6px;
+    font-style: italic;
+    margin-left: 4px;
+    min-width: 22px;
+    text-align: left;
 }
 
 .beaufort-5,
@@ -197,34 +195,6 @@ $hum-width: 15%;
     background-color: #E44106;
     font-weight: bold;
     color: #fff;
-}
-
-.wind-dir-SE {
-    transform: rotate(-135deg)
-}
-
-.wind-dir-S {
-    transform: rotate(-90deg)
-}
-
-.wind-dir-SW {
-    transform: rotate(-45deg)
-}
-
-.wind-dir-E {
-    transform: rotate(180deg)
-}
-
-.wind-dir-NW {
-    transform: rotate(45deg)
-}
-
-.wind-dir-N {
-    transform: rotate(90deg)
-}
-
-.wind-dir-NE {
-    transform: rotate(135deg)
 }
 
 .c-places-daily-forecast {
