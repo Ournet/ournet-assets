@@ -1,23 +1,27 @@
 .c-footer {
     color: $gray;
-    margin: $global-spacing-unit 0;
+    margin: $global-spacing-unit-small 0 0;
     font-size: $global-font-size - 2;
     h4 {
         margin-bottom: $global-spacing-unit-small;
         font-weight: normal;
+        color: $blue;
     }
     .o-layout__item {
         font-size: $global-font-size - 2;
+        margin-bottom: $global-spacing-unit;
     }
     a {
         color: $text-color;
         font-weight: 500;
-        &:hover {
-            color: $accent-color;
-        }
+    }
+
+    .c-aline {
+        margin-bottom: $global-spacing-unit-small;
     }
 }
-.o-int-sites {
+
+.o-footer-sites {
     div {
         display: inline-block;
         width: 50%;

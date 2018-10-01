@@ -1,0 +1,57 @@
+.c-aline {
+    display: block;
+    height: 6px;
+    div {
+        float: left;
+        width: percentage(1 / 10);
+        height: 100%;
+    }
+}
+
+.c-aline__1 {
+    background-color: $blue;
+}
+
+.c-aline__2 {
+    background-color: $indigo;
+}
+
+.c-aline__3 {
+    background-color: $purple;
+}
+
+.c-aline__4 {
+    background-color: $pink;
+}
+
+.c-aline__5 {
+    background-color: $red;
+}
+
+.c-aline__6 {
+    background-color: $orange;
+}
+
+.c-aline__7 {
+    background-color: $yellow;
+}
+
+.c-aline__8 {
+    background-color: $green;
+}
+
+.c-aline__9 {
+    background-color: $teal;
+}
+
+.c-aline__10 {
+    background-color: $cyan;
+}
+
+.c-aline--small {
+    height: 4px;
+}
+
+.c-aline--tiny {
+    height: 2px;
+}

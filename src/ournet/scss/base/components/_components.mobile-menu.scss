@@ -7,7 +7,7 @@
 }
 
 .c-mobm__btn-i {
-    background-color: $text-color;
+    background-color: $secondary;
     position: absolute;
     height: 4px;
     left: 0px;
@@ -17,7 +17,7 @@
         content: '';
         position: relative;
         top: 10px;
-        background-color: $text-color;
+        background-color: $secondary;
         height: 4px;
         display: block;
     }
@@ -25,7 +25,7 @@
         content: '';
         position: relative;
         top: 16px;
-        background-color: $text-color;
+        background-color: $secondary;
         height: 4px;
         display: block;
     }
