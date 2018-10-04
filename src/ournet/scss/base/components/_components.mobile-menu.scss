@@ -46,7 +46,7 @@
 }
 
 .c-mobm__overlay {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     left: 0px;
     right: 0px;
@@ -59,11 +59,24 @@
 
 .c-mobm__menu {
     position: fixed;
+    top: 0px;
     right: 0px;
     z-index: 1100;
-    width: 300px;
+    width: 250px;
+    max-width: 100%;
     height: 100%;
     transition: all 0.5s ease 0s;
+    overflow-y: auto;
+}
+
+.c-mobm__menu-content {
+    padding: $global-spacing-unit;
+    background-color: $primary;
+    padding-top: $global-spacing-unit * 2;
+    a {
+        color: white;
+        font-weight: 500;
+    }
 }
 
 .c-mobm__close {
