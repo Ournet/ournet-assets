@@ -24,7 +24,7 @@
         position: relative;
         font-weight: normal;
         a {
-            color: $secondary;
+            color: $text-color;
         }
     }
 }
@@ -33,4 +33,7 @@
 }
 .c-group-h--new h3 a {
     color: $green;
+}
+.c-group-h--popular h3 a {
+    color: $primary;
 }

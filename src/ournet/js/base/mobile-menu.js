@@ -5,7 +5,10 @@ var initedMenuContent = false;
 
 function showMenu() {
     if (!initedMenuContent) {
-        $('.c-mobm__ins').html($('.c-exp').html());
+        var ref = $('.c-mobm').data('ref');
+        if (ref) {
+            $('.c-mobm__ins').html($(ref).html());
+        }
         initedMenuContent = true;
     }
     $('.c-mobm__menu,.c-mobm__overlay').removeClass('u-hidden');
