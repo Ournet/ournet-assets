@@ -1,0 +1,25 @@
+.c-subscribe-bar {
+    padding: 30px;
+    background-color: #dfdacb;
+    background-image: url('https://c2.staticflickr.com/8/7724/26987380802_dc156534d3_z.jpg');
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.c-subscribe-bar__btn {
+    color: #fff;
+    font-size: 110%;
+    padding: 8px 14px;
+    border-radius: 2px;
+    background: #333;
+    background: rgba(33,33,33, 0.8);
+    display: inline-block;
+    margin:0px auto;
+    // text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
