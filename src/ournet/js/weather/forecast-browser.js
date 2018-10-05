@@ -12,7 +12,7 @@ function getData(element, date, ids) {
 
     xhr({
         url: url,
-        timeout: 1000 * 6,
+        timeout: 1000 * 8,
     }, function (error, res, body) {
         if (error) {
             console.error(error);
