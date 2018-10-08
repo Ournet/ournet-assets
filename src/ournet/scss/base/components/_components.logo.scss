@@ -53,10 +53,12 @@ a.c-logo__proj {
     display: inline-block;
     text-decoration: none;
     color: $red;
-	text-transform: lowercase; // font-weight: 400;
+    text-transform: lowercase; // font-weight: 400;
+    font-style: italic;
     &:before {
         content: "/";
         color: $text-color;
         padding-right: 2px;
+        font-style: normal;
     }
 }
