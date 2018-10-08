@@ -1,0 +1,28 @@
+.c-menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    li {
+        display: inline-block;
+    }
+    a {
+        display: block;
+        padding: 3px 12px;
+        border-radius: $global-radius;
+        text-decoration: none;
+        color: $text-color;
+        margin-right: 2px;
+        &:hover {
+            background-color: $primary;
+            color: white;
+        }
+    }
+}
+
+a.c-menu--selected {
+    background-color: $primary;
+    color: white;
+}

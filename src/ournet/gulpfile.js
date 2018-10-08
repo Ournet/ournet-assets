@@ -36,6 +36,7 @@ gulp.task('sass', function () {
     return gulp.src([
         './scss/weather/main.scss',
         './scss/weather/page-widget.scss',
+        './scss/horoscope/main.scss',
     ], { base: './scss' })
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(cssDist))

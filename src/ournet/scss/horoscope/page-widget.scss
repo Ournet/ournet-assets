@@ -1,0 +1,72 @@
+// SETTINGS
+@import "../base/settings.config";
+@import "settings/settings.config";
+@import "../../../../node_modules/inuitcss/settings/settings.core";
+@import "../base/settings.global";
+@import "settings/settings.global";
+
+
+@import "../base/components/components.buttons";
+@import "../base/components/components.autocomplete";
+
+.c-wconfig__tabs {
+    margin: 0px;
+    list-style: none;
+    >li {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: darken($bg-color, 10%);
+        cursor: pointer;
+        font-weight: 500;
+        margin-right: 2px;
+    }
+}
+
+li.c-wconfig__tabs--selected {
+    background-color: white;
+    border-top: 3px solid $accent-color;
+}
+
+.c-wconfig__content {
+    margin: 0px;
+    list-style: none;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    overflow: hidden;
+    th {
+        font-weight: 500;
+    }
+}
+
+.c-wconfig__input,
+.c-wconfig__place,
+#widget-script {
+    border-radius: $global-radius;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+}
+
+#widget-preview {
+    text-align: center;
+    h2,
+    h3,
+    h4 {
+        font-weight: normal;
+    }
+}
+
+#widget-iframe {
+    min-height: 260px;
+}
+
+#widget-script {
+    width: 90%;
+    height: 120px;
+    font-size: $global-font-size - 3;
+}
+
+.c-wconfig__place {
+    font-weight: 500;
+    background-color: lighten($primary, 40%);
+}

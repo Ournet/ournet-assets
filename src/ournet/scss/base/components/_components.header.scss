@@ -1,5 +1,5 @@
 
-$header-height: 60px;
+$header-height: 60px !default;
 
 .c-header {
     padding: 16px 0px;
@@ -7,9 +7,6 @@ $header-height: 60px;
 
     .c-logo {
         margin-top: $header-height / 4 - 3;
-    }
-    .c-header__item {
-        margin-top: $header-height / 4;
     }
     .c-cap {
         margin-top: $header-height / 4 - 4;

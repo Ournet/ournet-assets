@@ -141,8 +141,6 @@
 // @import "components/example.components.buttons";
 @import "../base/components/components.aline";
 @import "../base/components/components.logo";
-@import "../base/components/components.search";
-@import "../base/components/components.mobile-menu";
 @import "../base/components/components.header";
 @import "../base/components/components.capital-forecast";
 @import "../base/components/components.group";
@@ -155,15 +153,11 @@
 @import "../base/components/components.subscribe-bar";
 
 @import "./components/components.header";
-@import "./components/components.breadcrumb";
 @import "./components/components.page-title";
-@import "./components/components.weather-icons";
-@import "./components/components.explore-menu";
-@import "./components/components.forecast-browser";
+@import "../weather/components/components.weather-icons";
 
-@import "./components/components.places-list";
-@import "./components/components.weather-report";
 @import "./components/components.latest-news";
+@import "./components/components.menu";
 
 
 // UTILITIES

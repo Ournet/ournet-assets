@@ -1,0 +1,14 @@
+.c-latest-news {
+    .o-media__img {
+        width: 60px;
+        height: 60px;
+        border-radius: $global-radius;
+    }
+    .o-media {
+        margin-bottom: $global-spacing-unit-small;
+    }
+    h6 {
+        font-weight: 500;
+        line-height: 1.3;
+    }
+}
