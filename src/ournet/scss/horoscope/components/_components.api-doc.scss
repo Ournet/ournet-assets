@@ -1,0 +1,24 @@
+.c-api-doc {
+    overflow: hidden;
+    border-right: 2px solid $report-border-color;
+    border-bottom: 2px solid $report-border-color;
+    background-color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    p {
+        margin-bottom: 12px;
+    }
+    p:last-child {
+        margin-bottom: 0px;
+    }
+
+    code {
+        background-color: #fff;
+        padding: 0px 3px;
+        display: inline;
+        border-radius: 3px;
+        border: 1px solid #eee;
+        font-weight: bold;
+        overflow-wrap: break-word;
+    }
+}
