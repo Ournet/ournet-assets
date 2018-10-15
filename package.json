@@ -12,26 +12,24 @@
     "ournet:serv": "gulp --gulpfile ./src/ournet/gulpfile.js serv",
     "ournet:watch": "gulp --gulpfile ./src/ournet/gulpfile.js watch"
   },
-  "dependencies": {
-    "autocompleter": "^2.0.3",
-    "cash-dom": "^2.3.5",
-    "xhr": "^2.5.0"
-  },
   "devDependencies": {
+    "autocompleter": "^2.0.3",
     "browserify": "^16.2.2",
-    "gulp-buffer": "^0.0.2",
-    "gulp-tap": "^1.0.1",
-    "gulp-uglify": "^3.0.1",
-    "gulplog": "^1.0.0",
+    "cash-dom": "^2.3.5",
     "dotenv": "^6.0.0",
     "gulp": "^3.9.1",
+    "gulp-buffer": "^0.0.2",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect": "^5.5.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-rev-all": "^0.9.7",
     "gulp-sass": "^4.0.1",
-    "inuitcss": "^6.0.0"
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulplog": "^1.0.0",
+    "inuitcss": "^6.0.0",
+    "xhr": "^2.5.0"
   },
   "repository": {
     "type": "git",
