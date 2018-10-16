@@ -1,6 +1,6 @@
 $quote-color: darken($bg-color, 10%);
 .c-quote-it {
-    margin-bottom: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit;
 }
 .c-quote-it__text {
     padding: 6px 10px;
@@ -51,7 +51,7 @@ $quote-color: darken($bg-color, 10%);
     background-color: $quote-color;
 }
 
-.c-quote-it__author {
+.c-quote-it__body {
     overflow: hidden;
     display: block;
     color: $mute-color;
@@ -63,4 +63,14 @@ $quote-color: darken($bg-color, 10%);
         color: $secondary;
         font-weight: 600;
     }
+    time {
+        font-size: 80%;
+    }
+}
+.c-quote-it__ctx {
+    font-size: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
 }
