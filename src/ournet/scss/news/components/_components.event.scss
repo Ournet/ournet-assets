@@ -1,0 +1,27 @@
+
+@include mq($until: tablet) {
+    .c-event {
+        margin-left: -$global-spacing-unit-small;
+        margin-right: -$global-spacing-unit-small;
+    }
+    .c-event__body {
+        padding-left: $global-spacing-unit-small;
+    }
+}
+.c-event {
+    margin-bottom: $global-spacing-unit;
+}
+
+.c-event__body {
+    background-color: white;
+    padding-top: $global-spacing-unit-small;
+    padding-right: $global-spacing-unit-small;
+    padding-bottom: $global-spacing-unit;
+}
+
+.c-event__title {
+    font-weight: 400;
+    a {
+        color: $text-color;
+    }
+}
