@@ -1,0 +1,46 @@
+.c-trend-menu {
+    margin-bottom: $global-spacing-unit;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    margin-top: -$global-spacing-unit + 4;
+    position: relative;
+}
+
+.c-trend-menu__l {
+    margin: 0px auto;
+    list-style: none;
+    display: inline-block;
+}
+
+.c-trend-menu__trend {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 7px;
+        background-color: $accent-color;
+        display: inline-block;
+        border-radius: 100%;
+        width: $global-spacing-unit-small;
+        height: $global-spacing-unit-small;
+    }
+}
+
+.c-trend-menu__i {
+    padding: 0px 0px 0px $global-spacing-unit;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 160px;
+    text-overflow: ellipsis;
+    a {
+        color: $text-color;
+        text-decoration: none;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
