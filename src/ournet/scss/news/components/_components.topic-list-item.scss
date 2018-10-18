@@ -1,0 +1,16 @@
+.c-topic-it {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+.c-topic-it--tag {
+    margin-right: 6px;
+    padding: 1px 6px;
+    background-color: #e3e3e3;
+    color: $text-color !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
