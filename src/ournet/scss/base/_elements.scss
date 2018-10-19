@@ -21,3 +21,10 @@ a {
         text-decoration: underline;
     }
 }
+
+hr {
+    background: darken($bg-color, 3%);
+    height: 1px;
+    margin: $global-spacing-unit-tiny 0px;
+    border: none;
+}
