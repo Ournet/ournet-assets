@@ -49,6 +49,8 @@ $quote-color: darken($bg-color, 10%);
     height: 40px;
     border-radius: 50%;
     background-color: $quote-color;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .c-quote-it__body {

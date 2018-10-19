@@ -63,6 +63,7 @@ gulp.task('js', function () {
     return gulp.src([
         './js/weather/main.js',
         './js/weather/page-widget.js',
+        './js/news/main.js',
     ], { read: false, base: './js' }) // no need of reading file because browserify does.
         // transform file objects using gulp-tap plugin
         .pipe(tap(function (file) {

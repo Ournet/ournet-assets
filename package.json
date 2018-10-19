@@ -29,6 +29,7 @@
     "gulp-uglify": "^3.0.1",
     "gulplog": "^1.0.0",
     "inuitcss": "^6.0.0",
+    "vanilla-lazyload": "^8.17.0",
     "xhr": "^2.5.0"
   },
   "repository": {
