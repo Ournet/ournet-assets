@@ -1,0 +1,21 @@
+.c-section {
+    margin: $global-spacing-unit 0px;
+}
+
+.c-section-h {
+    margin-bottom: $global-spacing-unit;
+    position: relative;
+    border-bottom: 1px solid darken($bg-color, 5%);
+    h3, h4 {
+        border-bottom: 1px solid darken($bg-color, 10%);
+        display: inline-block;
+        position: relative;
+        margin-bottom: -1px;
+        padding-bottom: $global-spacing-unit-small;
+        font-weight: normal;
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+}
