@@ -1,11 +1,14 @@
 .c-event-it {
     overflow: hidden;
-    margin-bottom: $global-spacing-unit;
     &.c-event-it--card,
     &.c-event-it--main {
         background-color: #fff;
         box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
         padding: 0px $global-spacing-unit-small $global-spacing-unit-small;
+        margin-bottom: $global-spacing-unit;
+    }
+    &.c-event-it--media {
+        margin-bottom: $global-spacing-unit-small;
     }
 }
 
@@ -22,8 +25,8 @@
     }
     .c-event-it--media & {
         display: inline-block;
-        height: 80px;
-        width: 80px;
+        height: 70px;
+        width: 70px;
     }
 }
 
