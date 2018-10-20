@@ -1,70 +1,95 @@
-$item-spacing: $global-spacing-unit-small;
 .c-event-it {
-    background-color: #fff;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    padding: 0px $item-spacing $item-spacing;
     overflow: hidden;
     margin-bottom: $global-spacing-unit;
+    &.c-event-it--card,
+    &.c-event-it--main {
+        background-color: #fff;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+        padding: 0px $global-spacing-unit-small $global-spacing-unit-small;
+    }
 }
 
 .c-event-it__media {
-    position: relative;
-    display: block;
     overflow: hidden;
-    padding-bottom: (1.04/2) * 100%;
-    margin-left: -$item-spacing;
-    margin-right: -$item-spacing;
     background-size: cover;
     background-repeat: no-repeat;
-    // img {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     min-height: 100%;
-    //     min-width: 100%;
-    // }
+    .c-event-it--card &,
+    .c-event-it--main & {
+        display: block;
+        padding-bottom: (1.04/2) * 100%;
+        margin-left: -$global-spacing-unit-small;
+        margin-right: -$global-spacing-unit-small;
+    }
+    .c-event-it--media & {
+        display: inline-block;
+        height: 80px;
+        width: 80px;
+    }
 }
 
 .c-event-it__title {
-    margin: 6px 0;
     font-weight: 500;
+    .c-event-it--card &,
+    .c-event-it--main & {
+        margin: 6px 0;
+    }
+    .c-event-it--media & {
+        display: block;
+        margin: 0px 0px 6px;
+        line-height: 1.3;
+    }
 }
+
 h2.c-event-it__title {
     @include inuit-font-size($inuit-font-size-h3);
 }
+
 h3.c-event-it__title {
     @include inuit-font-size($inuit-font-size-h5);
 }
 
+h4.c-event-it__title {
+    @include inuit-font-size($inuit-font-size-h6);
+}
+
 .c-event-it__info {
-    font-size: 80%;
-    color: $mute-color;
+    .c-event-it--card &,
+    .c-event-it--main & {
+        font-size: 80%;
+    }
 }
 
 .c-event-it__stats {
-    float: right;
+    color: $mute-color;
+    .c-event-it--media & {
+        font-size: 80%;
+        time {
+            float: right;
+        }
+    }
 }
 
 .c-event-it__topic {
     display: inline-block;
-    padding: 1px 6px;
-    border-radius: $global-radius;
-    background-color: $secondary;
-    color: white;
-}
-
-.c-event-it__items {
-    color: $mute-color;
-    font-size: 90%;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin-top: $item-spacing;
-    a {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 100%;
-        display: block;
-        color: $text-color;
+    .c-event-it--media & {
+        color: $mute-color;
+        text-transform: uppercase;
+        font-weight: 400;
     }
 }
+
+// .c-event-it__items {
+//     color: $mute-color;
+//     font-size: 90%;
+//     max-width: 100%;
+//     margin-bottom: 0px;
+//     margin-top: $item-spacing;
+//     a {
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         overflow: hidden;
+//         max-width: 100%;
+//         display: block;
+//         color: $text-color;
+//     }
+// }
