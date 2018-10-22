@@ -3,6 +3,7 @@ $quote-color: darken($bg-color, 10%);
     margin-bottom: $global-spacing-unit;
 }
 .c-quote-it__text {
+    cursor: pointer;
     padding: 6px 10px;
     background-color: $quote-color;
     position: relative;
@@ -13,6 +14,12 @@ $quote-color: darken($bg-color, 10%);
     font-family: Georgia, Helvetica, serif;
     line-height: 1.3;
     text-indent: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: ($global-font-size * 1.1) * 3 + 22;
+    &:active,&:focus {
+        max-height: none;
+    }
     >i {
         color: $accent-color;
         font-size: 150%;
