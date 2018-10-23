@@ -38,6 +38,7 @@ gulp.task('sass', function () {
         './scss/weather/page-widget.scss',
         './scss/horoscope/main.scss',
         './scss/news/main.scss',
+        './scss/news/gallery.scss',
     ], { base: './scss' })
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(cssDist))
@@ -64,6 +65,7 @@ gulp.task('js', function () {
         './js/weather/main.js',
         './js/weather/page-widget.js',
         './js/news/main.js',
+        './js/news/gallery.js',
     ], { read: false, base: './js' }) // no need of reading file because browserify does.
         // transform file objects using gulp-tap plugin
         .pipe(tap(function (file) {

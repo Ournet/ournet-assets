@@ -50,5 +50,8 @@
   "homepage": "https://github.com/Ournet/ournet-assets#readme",
   "browser": {
     "request": "xhr"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.2"
   }
 }
