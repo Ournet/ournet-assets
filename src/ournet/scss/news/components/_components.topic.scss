@@ -1,0 +1,19 @@
+// @include mq($until: tablet) {
+//     .c-topic {
+//         margin-left: -$global-spacing-unit-small;
+//         margin-right: -$global-spacing-unit-small;
+//     }
+// }
+
+// .c-topic {
+//     // background-color: white;
+// }
+
+
+.c-topic-h__img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10%;
+    border: 3px solid white;
+}

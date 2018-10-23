@@ -1,0 +1,23 @@
+
+.c-item-it {
+    overflow: hidden;
+    margin-bottom: $global-spacing-unit-tiny / 2;
+}
+
+.c-item-it--tline {
+    time {
+        float: left;
+        color: $mute-color;
+        display: block;
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: $global-spacing-unit-small;
+    }
+    a {
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
