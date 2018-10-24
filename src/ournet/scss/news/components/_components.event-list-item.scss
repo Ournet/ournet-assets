@@ -1,12 +1,5 @@
 .c-event-it {
     overflow: hidden;
-    &.c-event-it--card,
-    &.c-event-it--main {
-        background-color: #fff;
-        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-        padding: 0px $global-spacing-unit-small $global-spacing-unit-small;
-        margin-bottom: $global-spacing-unit;
-    }
     &.c-event-it--media {
         margin-bottom: $global-spacing-unit-small;
     }
@@ -16,13 +9,8 @@
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
-    .c-event-it--card &,
-    .c-event-it--main & {
-        display: block;
-        padding-bottom: (1.04/2) * 100%;
-        margin-left: -$global-spacing-unit-small;
-        margin-right: -$global-spacing-unit-small;
-    }
+    background-position-x: center;
+
     .c-event-it--media & {
         display: inline-block;
         height: 70px;
@@ -32,10 +20,6 @@
 
 .c-event-it__title {
     font-weight: 500;
-    .c-event-it--card &,
-    .c-event-it--main & {
-        margin: 6px 0;
-    }
     .c-event-it--media & {
         display: block;
         margin: 0px 0px 6px;
@@ -53,13 +37,6 @@ h3.c-event-it__title {
 
 h4.c-event-it__title {
     @include inuit-font-size($inuit-font-size-h6);
-}
-
-.c-event-it__info {
-    .c-event-it--card &,
-    .c-event-it--main & {
-        font-size: 80%;
-    }
 }
 
 .c-event-it__stats {
@@ -81,22 +58,8 @@ h4.c-event-it__title {
     }
 }
 
-// .c-event-it__items {
-//     color: $mute-color;
-//     font-size: 90%;
-//     max-width: 100%;
-//     margin-bottom: 0px;
-//     margin-top: $item-spacing;
-//     a {
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-//         overflow: hidden;
-//         max-width: 100%;
-//         display: block;
-//         color: $text-color;
-//     }
-// }
-.c-event-it--zen {
+
+.c-event-it--card {
     height: 320px;
     width: 100%;
     margin-bottom: $global-spacing-unit;
@@ -151,17 +114,10 @@ h4.c-event-it__title {
     .c-event-it__inner {
         position: relative; // z-index: 2;
         padding-top: 140px;
-        padding-left: 24px;
-        padding-right: 23px;
+        padding-left: 22px;
+        padding-right: 20px;
         height: 100%;
         max-height: 100%;
-        box-sizing: border-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start;
         padding-bottom: 44px;
         border-radius: 4px;
     }
@@ -171,7 +127,7 @@ h4.c-event-it__title {
         font-weight: 700;
         font-size: 20px;
         line-height: 24px;
-        font-family: $global-font-family;
+        // font-family: $global-font-family;
         margin-bottom: 0px;
     }
     .c-event-it__summary {
@@ -215,7 +171,7 @@ h4.c-event-it__title {
     }
 }
 
-.c-event-it--zen.c-event-it__black {
+.c-event-it--card.c-event-it__black {
     &:hover,
     &:focus,
     &:active {
@@ -233,9 +189,9 @@ h4.c-event-it__title {
         color: #111;
     }
 }
-.c-event-it--zen.c-event-it--zen-wide {
+.c-event-it--card.c-event-it--card-wide {
     .c-event-it__inner {
-        padding-top: 40px;
+        padding-top: 60px;
         padding-right: 50%;
     }
     .c-event-it__stats {
@@ -261,7 +217,14 @@ h4.c-event-it__title {
         height: 100%;
     }
     .c-event-it__summary {
-        height: 102px;
+        height: 110px;
         margin-top: 24px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .c-event-it__title {
+        height: 80px;
+        font-size: 22px;
+        line-height: 26px;
     }
 }

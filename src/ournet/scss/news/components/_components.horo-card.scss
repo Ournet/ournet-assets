@@ -1,0 +1,49 @@
+$card-height: 320px;
+.c-horo-card {
+    height: $card-height;
+    width: 100%;
+    margin-bottom: $global-spacing-unit;
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: darken($bg-color, 10%);
+    padding: $global-spacing-unit-small $global-spacing-unit;
+    text-align: center;
+}
+
+.c-horo-card__title {
+    font-size: 120%;
+    font-weight: 600;
+    color: $text-color !important;
+}
+
+.c-horo-card__list {
+    display: block;
+    margin: $global-spacing-unit-small 0px 0px 0px;
+    list-style: none;
+    overflow: hidden;
+    height: 86%;
+    li {
+        width: 33.333%;
+        height: 61px;
+        display: inline-block;
+        margin: 0px;
+        padding: $global-spacing-unit-tiny;
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        svg {
+            display: block;
+            height: 100%;
+            width: 100%;
+            fill: $accent-color;
+        }
+    }
+}

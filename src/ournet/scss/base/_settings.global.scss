@@ -54,6 +54,7 @@ $global-radius: 3px;
 $global-transition: all 300ms ease-in-out;
 
 $global-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$global-h-font-family: $global-font-family !default;
 
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.

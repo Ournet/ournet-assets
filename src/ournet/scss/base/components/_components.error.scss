@@ -1,0 +1,13 @@
+
+.c-error-h {
+    margin: 50px;
+    text-align: center;
+    h1 span {
+        color: #fff;
+        background: $accent-color;
+        display: inline-block;
+        padding: 2px 6px;
+        margin-left: 12px;
+        border-radius: $global-radius;
+    }
+}
